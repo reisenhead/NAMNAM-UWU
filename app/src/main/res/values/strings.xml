@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">NAMNAM-UWU</string>
+    <string name="title_activity_register_screen">RegisterScreen</string>
+
+    //registerscreen
+    <string name="hello">Ingresa con</string>
+    <string name="register_button">O REGÍSTRATE</string>
+    <string name="login">¿Tienes una cuenta?</string>
+    <string name="login_button">INICIAR SESIÓN</string>
+
+    //loginscreen
+    <string name="user">Nombre o username</string>
+    <string name="password">Contraseña</string>
+    <string name="f_password">¿Olvidaste tu contraseña?</string>
+
+    //toolbar
+    <string name="profile">Perfil</string>
+    <string name="home">Home</string>
+    <string name="offers">offers</string>
+    <string name="cart">Carrito</string>
+    <string name="favs">Favoritos</string>
+
+    //home
+    <string name="products">Productos</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string name="imagen_de_fondo">Imagen de fondo</string>
+
+    //profilescreen
+    <string name="username">Persona</string>
+    <string name="eco_print">Tu consumo ha logrado reducir tu huella ecológica en un 20%</string>
+    <string name="history">Historial de compras</string>
+    <string name="payment">Mis métodos de pago</string>
+    <string name="address">Mis direcciones</string>
+    <string name="settings">Configuración</string>
+
+</resources>

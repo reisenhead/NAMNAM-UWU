@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterScreen"
+    tools:ignore="MissingClass">
+
+    <ImageView
+        android:id="@+id/leaveView"
+        android:layout_width="258dp"
+        android:layout_height="215dp"
+        android:scaleType="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/leave" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="@string/hello"
+        android:textColor="@color/primary1"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/googleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/instaButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/faceButton"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:srcCompat="@drawable/logogoogle" />
+
+    <ImageButton
+        android:id="@+id/faceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/googleButton"
+        android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:srcCompat="@drawable/logoface" />
+
+    <ImageButton
+        android:id="@+id/instaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/whatsButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/googleButton"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:srcCompat="@drawable/logoinsta" />
+
+    <ImageButton
+        android:id="@+id/whatsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/instaButton"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:srcCompat="@drawable/logowhats" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="338dp" />
+
+    <Button
+        android:id="@+id/registrateButton"
+        android:layout_width="336dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="264dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/register_button"
+        android:textColor="@color/accent1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tienesCuentaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iniciaSesionButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/iniciaSesionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/roboto"
+        android:text="@string/login_button"
+        android:textColor="@color/accent1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tienesCuentaText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
