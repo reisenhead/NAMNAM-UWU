@@ -34,4 +34,10 @@
     <string name="address">Mis direcciones</string>
     <string name="settings">Configuración</string>
 
+    //card
+    <string name="package_card">Paquete</string>
+    <string name="place">Restaurant</string>
+    <string name="distance">Distancia</string>
+    <string name="hour">Hora</string>
+    <string name="distance_km">km</string>
 </resources>
