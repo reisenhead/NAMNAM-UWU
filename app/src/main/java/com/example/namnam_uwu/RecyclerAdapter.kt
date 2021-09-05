@@ -25,7 +25,7 @@ class RecyclerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolder(layoutInflater.inflate(R.layout.item_card, parent, false))
+        return ViewHolder(layoutInflater.inflate(R.layout.item_card3, parent, false))
     }
 
     override fun getItemCount(): Int {

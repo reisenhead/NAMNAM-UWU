@@ -1,153 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal">
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="30dp"
+    app:cardBackgroundColor="@color/ColorCard"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="20dp">
+ <androidx.constraintlayout.widget.ConstraintLayout
+     android:id="@+id/layoutAnimal"
+     android:layout_width="390dp"
+     android:layout_height="320dp"
+     android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="387dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+  <ImageView
+      android:id="@+id/imgProduct"
+      android:layout_width="390dp"
+      android:layout_height="180dp"
+      android:contentDescription="@+Product/tvProduct"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/breakfast"
+      android:scaleType="centerCrop"/>
 
-            <!-- Media -->
+  <TextView
+      android:id="@+id/tvProduct"
+      android:layout_width="100dp"
+      android:layout_height="37dp"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="178dp"
+      android:fontFamily="Poppins"
+      android:text="@string/package_card"
+      android:textAppearance="?attr/textAppearanceBody2"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.027"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgProduct"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:contentDescription="@+Product/tvProduct"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/breakfast" />
+  <TextView
+      android:id="@+id/tvPrice"
+      android:layout_width="100dp"
+      android:layout_height="37dp"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="212dp"
+      android:fontFamily="Poppins"
+      android:text="@string/price"
+      android:textAppearance="?attr/textAppearanceBody2"
+      android:textSize="26sp"
+      android:textStyle="bold"
+      android:textColor="@color/ColorPreci"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.9"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
+  <TextView
+      android:id="@+id/tvDescription"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="0dp"
+      android:fontFamily="Poppins"
+      android:text="@string/place"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.048"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvProduct" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+  <ImageView
+      android:id="@+id/location"
+      android:layout_width="33dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="2dp"
+      android:visibility="visible"
+      app:icon="@drawable/map_marker"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.022"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+      app:srcCompat="@drawable/map_marker"
+      tools:ignore="ContentDescription" />
 
-                <!-- Title, secondary and supporting text -->
-                <TextView
-                    android:id="@+id/tvProduct"
-                    android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:text="@string/package_card"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    tools:ignore="HardcodedText" />
+  <TextView
+      android:id="@+id/tvQuantity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/distance"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/location"
+      app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
-                <TextView
-                    android:id="@+id/tvDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="Poppins"
-                    android:text="@string/place"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    android:textStyle="bold" />
+  <TextView
+      android:id="@+id/km"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/distance_km"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.034"
+      app:layout_constraintStart_toEndOf="@+id/tvQuantity"
+      app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center|center_vertical"
+  <ImageView
+      android:id="@+id/hour"
+      android:layout_width="33dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="8dp"
+      android:visibility="visible"
+      app:icon="@drawable/clock"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.022"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/location"
+      app:srcCompat="@drawable/clock"
+      tools:ignore="ContentDescription" />
 
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal">
+  <TextView
+      android:id="@+id/day"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/day"
+      android:textStyle="bold"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/hour"
+      app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
 
-                    <ImageView
-                        android:id="@+id/location"
-                        android:layout_width="33dp"
-                        android:layout_height="match_parent"
-                        android:visibility="visible"
-                        app:icon="@drawable/map_marker"
-                        app:srcCompat="@drawable/map_marker"
-                        tools:ignore="ContentDescription" />
+  <TextView
+      android:id="@+id/watch"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/watch"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.034"
+      app:layout_constraintStart_toEndOf="@+id/day"
+      app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
 
-                    <TextView
-                        android:id="@+id/tvQuantity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top|center_vertical"
-                        android:layout_marginTop="16dp"
-                        android:fontFamily="Poppins"
-                        android:gravity="center"
-                        android:text="@string/distance"
-                        android:textAppearance="?attr/textAppearanceBody2" />
+  <ImageView
+      android:id="@+id/packed"
+      android:layout_width="33dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="8dp"
+      android:visibility="visible"
+      app:icon="@drawable/breakfast"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.063"
+      app:layout_constraintStart_toEndOf="@+id/watch"
+      app:layout_constraintTop_toBottomOf="@+id/km"
+      app:srcCompat="@drawable/noodles"
+      tools:ignore="ContentDescription" />
 
-                    <TextView
-                        android:id="@+id/km"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center|top|center_vertical"
-                        android:layout_marginTop="16dp"
-                        android:fontFamily="Poppins"
-                        android:gravity="center"
-                        android:text="@string/distance_km"
-                        android:textAppearance="?attr/textAppearanceBody2" />
+  <TextView
+      android:id="@+id/available"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/available"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/packed"
+      app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
 
-                </LinearLayout>
+  <ImageView
+      android:id="@+id/star"
+      android:layout_width="33dp"
+      android:layout_height="35dp"
+      android:layout_marginTop="8dp"
+      android:visibility="visible"
+      app:icon="@drawable/star_settings"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.431"
+      app:layout_constraintStart_toEndOf="@+id/watch"
+      app:layout_constraintTop_toBottomOf="@+id/km"
+      app:srcCompat="@drawable/star_settings"
+      tools:ignore="ContentDescription" />
 
-            </LinearLayout>
+  <TextView
+      android:id="@+id/like"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center|top|center_vertical"
+      android:layout_marginTop="16dp"
+      android:fontFamily="Poppins"
+      android:gravity="center"
+      android:text="@string/like"
+      android:textAppearance="?attr/textAppearanceBody2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/star"
+      app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:orientation="horizontal">
-
-                <com.google.android.material.button.MaterialButton
-                    style="?attr/borderlessButtonStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="18dp"
-                    android:baselineAligned="false"
-                    android:button="@drawable/clock"
-                    android:id="@+id/Vermas"/>
-                <TextView
-                    android:id="@+id/Hour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|top|center_vertical"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="48dp"
-                    android:fontFamily="Poppins"
-                    android:gravity="center"
-                    android:text="@string/distance"
-                    android:textAppearance="?attr/textAppearanceBody2" />
-                <ImageView
-                    android:id="@+id/clock"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:button="@drawable/noodles"
-                    android:visibility="visible"
-                    tools:ignore="ContentDescription" />
-                <CheckBox
-                    android:id="@+id/heart"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:button="@drawable/star_outline"
-                    android:translationX="30dp"
-                    android:visibility="visible" />
-
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>
