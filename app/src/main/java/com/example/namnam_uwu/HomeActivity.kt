@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import com.example.namnam_uwu.fragments.HomeFragment
-import com.example.namnam_uwu.fragments.ProfileFragment
-import com.example.namnam_uwu.fragments.ShoppingCartFragment
-import com.example.namnam_uwu.fragments.StarFragment
+import com.example.namnam_uwu.fragments.*
 
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -19,7 +16,7 @@ class HomeActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = ShoppingCartFragment()
-    private val starFragment = StarFragment()
+    private val starFragment = MapFragment()
 
     override fun onBackPressed() {
         replaceFragment(homeFragment)
