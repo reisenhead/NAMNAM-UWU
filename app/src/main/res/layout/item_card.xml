@@ -65,6 +65,23 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
+      android:id="@+id/tvPriceOld"
+      android:layout_width="80dp"
+      android:layout_height="27dp"
+      android:layout_alignParentTop="true"
+      android:layout_marginTop="240dp"
+      android:fontFamily="Poppins"
+      android:text="@string/priceold"
+      android:textAllCaps="false"
+      android:textAppearance="?attr/textAppearanceBody2"
+      android:textColor="@color/ColorPreciOld"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.874"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
       android:id="@+id/tvDescription"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

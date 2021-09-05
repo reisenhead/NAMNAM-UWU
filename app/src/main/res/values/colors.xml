@@ -20,4 +20,5 @@
     <color name= "auxiliarColor2">#FFEB3B</color>
     <color name= "ColorCard">#F6F4F4</color>
     <color name= "ColorPreci">#F88F01</color>
+    <color name= "ColorPreciOld">#F80101</color>
 </resources>

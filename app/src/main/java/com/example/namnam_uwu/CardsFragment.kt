@@ -88,7 +88,7 @@ class CardsFragment : Fragment() {
         products.add(Product("Platillo de Brochetas", "Disponible Prime", "1",3.8f,R.drawable.brochetas))
         products.add(Product("Coctel de Frutas", "Noise Cancelling", "5",4.8f,R.drawable.macarrones))
         products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.postre))
-        products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.espaguetigi))
+        products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.espagueti))
         return products
     }
 
