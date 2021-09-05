@@ -85,10 +85,10 @@ class CardsFragment : Fragment() {
         products.add(Product("Paquet Fruta", "Amamba", "2",4.6f,R.drawable.soul4))
         products.add(Product("Molletes", "Amamba", "2",4.6f,R.drawable.soul5))
         products.add(Product("Manzanas", "10ma Generación", "12",4.4f,R.drawable.breakfast))
-        products.add(Product("Platillo de Brochetas", "Disponible Prime", "1",3.8f,R.drawable.breakfast))
-        products.add(Product("Coctel de Frutas", "Noise Cancelling", "5",4.8f,R.drawable.breakfast))
-        products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.breakfast))
-
+        products.add(Product("Platillo de Brochetas", "Disponible Prime", "1",3.8f,R.drawable.brochetas))
+        products.add(Product("Coctel de Frutas", "Noise Cancelling", "5",4.8f,R.drawable.macarrones))
+        products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.postre))
+        products.add(Product("Verduras y Frutas", "Noise Cancelling", "5",4.8f,R.drawable.espaguetigi))
         return products
     }
 
