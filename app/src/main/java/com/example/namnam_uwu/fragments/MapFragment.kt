@@ -107,16 +107,38 @@ import com.google.android.gms.maps.model.MarkerOptions
 
             mMap = googleMap
 
-            val cervezaBarrio = LatLng(19.431225,-99.1858892)
-            val cabana = LatLng(19.4312519,-99.189154)
-            val puertoMadero = LatLng(19.431225,-99.1880833)
+            val cdMx = LatLng(19.4115814,-99.1717618)
+            val fondaGarufa = LatLng(19.4116616,-99.1747227)
+            val greenGlass = LatLng(19.4062635,-99.1738504)
+            val elPescadito = LatLng(19.4142968,-99.1734571)
+            val amamba = LatLng(19.4167556,-99.1732115)
+            val forever = LatLng(19.417244,-99.156813)
+            val forte = LatLng(19.414804,-99.1774675)
+            val ramenBar = LatLng(19.4168965,-99.1657248)
+            val pitahayaVegana = LatLng(19.4168625,-99.1661117)
+            val soulRoma = LatLng(19.4197904,-99.1596364)
+            val cachitoMio = LatLng(19.416417,-99.1630745)
+            val losLoosers = LatLng(19.419011,-99.1766436)
+            val laDocena = LatLng(19.4190101,-99.1920128)
 
 
             mMap.isMyLocationEnabled = true
-            mMap.addMarker(MarkerOptions().position(puertoMadero).title("Puerto Madero").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
-            mMap.addMarker(MarkerOptions().position(cabana).title("Cabana").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
-            mMap.addMarker(MarkerOptions().position(cervezaBarrio).title("Cerveceria de barrio").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
-            mMap.setMinZoomPreference(12.0f)
+
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(cdMx))
+            mMap.addMarker(MarkerOptions().position(fondaGarufa).title("Fonda Garufa").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(greenGlass).title("Green glass condesa").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(forever).title("Forever").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(amamba).title("Amamba").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(elPescadito).title("El Pescadito").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(forte).title("Forte").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(ramenBar).title("Ramen Bar").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(pitahayaVegana).title("La pitahaya vegana").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(soulRoma).title("Soul la Roma").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(cachitoMio).title("Cachito Mío Quiches y Tartas").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(losLoosers).title("Los lossers").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+            mMap.addMarker(MarkerOptions().position(laDocena).title("La docena").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
+
+            mMap.setMinZoomPreference(13.0f)
             mMap.setMaxZoomPreference(16.0f)
 
 

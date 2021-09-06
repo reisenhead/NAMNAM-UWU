@@ -18,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = ShoppingCartFragment()
-    private val starFragment = StarFragment()
+    private val starFragment = MapFragment()
 
 
     override fun onBackPressed() {
