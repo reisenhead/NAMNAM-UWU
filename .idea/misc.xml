@@ -25,4 +25,10 @@
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
+<<<<<<< HEAD
+=======
+
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+
+>>>>>>> 204fc31e3a1846a5c97c4aa0c72a5c6c869e8925
 </project>

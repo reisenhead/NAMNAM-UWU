@@ -18,5 +18,8 @@
     <color name= "auxiliarColor">#FF6200EE</color>
     <color name= "auxiliarColor1">#FF000000</color>
     <color name= "auxiliarColor2">#FFEB3B</color>
-    <color name= "auxiliarColor3">#FFBB02</color>
+    <color name= "ColorCard">#F6F4F4</color>
+    <color name= "ColorPreci">#F88F01</color>
+    <color name= "ColorPreciOld">#F80101</color>
+    <color name= "ColorGray">#989696</color>
 </resources>
