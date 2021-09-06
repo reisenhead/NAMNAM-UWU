@@ -7,13 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.fragment.findNavController
-import com.example.namnam_uwu.CardsFragment
 import com.example.namnam_uwu.HomeActivity
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.databinding.FragmentHomeBinding
-import com.example.namnam_uwu.databinding.FragmentMapBinding
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,6 +37,7 @@ class HomeFragment : Fragment() {
 
     }
 
+    @SuppressLint("UseRequireInsteadOfGet")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,7 +45,10 @@ class HomeFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+       return inflater.inflate(R.layout.fragment_home, container, false)
+
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,9 +56,11 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.bind(view)
 
         binding.buttonworld.setOnClickListener {
+          
             val fragment = MapFragment()
             val transaction = getFragmentManager()?.beginTransaction()
             transaction?.replace(R.id.fragment_container, fragment)
+            transaction?.addToBackStack(null)
             transaction?.commit()
         }
         binding.buttonlist.setOnClickListener {
