@@ -21,4 +21,5 @@
     <color name= "ColorCard">#F6F4F4</color>
     <color name= "ColorPreci">#F88F01</color>
     <color name= "ColorPreciOld">#F80101</color>
+    <color name= "ColorGray">#989696</color>
 </resources>

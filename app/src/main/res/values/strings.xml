@@ -46,4 +46,5 @@
     <string name="available">10</string>
     <string name="price">$50</string>
     <string name="priceold">$150</string>
+    <string name="line"> <strike>$150</strike> </string>
 </resources>

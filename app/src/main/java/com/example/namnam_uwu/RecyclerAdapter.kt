@@ -37,16 +37,24 @@ class RecyclerAdapter(
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         //obteniendo las referencias a las Views
         val productName = view.findViewById(R.id.tvProduct) as TextView
-        val description = view.findViewById(R.id.tvDescription) as TextView
-        val price = view.findViewById(R.id.tvQuantity) as TextView
+        val restaurnat = view.findViewById(R.id.tvDescription) as TextView
+        val distance = view.findViewById(R.id.tvQuantity) as TextView
         val image = view.findViewById(R.id.imgProduct) as ImageView
+        val hour = view.findViewById(R.id.watch) as TextView
+        val day = view.findViewById(R.id.day) as TextView
+        val amount = view.findViewById(R.id.available) as TextView
+        val star = view.findViewById(R.id.like) as TextView
 
         //"atando" los datos a las Views
         fun bind(product: Product, context: Context){
-            productName.text = product.name
-            description.text = product.description
-            price.text = product.price
+            productName.text = product.paquete
+            restaurnat.text = product.restaurant
+            distance.text = product.distance
             image.setImageResource(product.idImage)
+            hour.text = product.hour
+            amount.text = product.amount
+            day.text = product.day
+            star.text = product.star
         }
     }
 
