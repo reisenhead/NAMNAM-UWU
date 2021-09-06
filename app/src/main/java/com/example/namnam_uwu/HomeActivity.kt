@@ -46,9 +46,15 @@ class HomeActivity : AppCompatActivity() {
 
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.ic_home -> startActivity(Intent(this, HomeActivity::class.java))
-                R.id.ic_profile -> replaceFragment(profileFragment)
-                R.id.ic_shopping_cart -> replaceFragment(shoppingCartFragment)
+                R.id.ic_home -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                }
+                R.id.ic_profile -> {
+                    replaceFragment(profileFragment)
+                }
+                R.id.ic_shopping_cart -> {
+                    replaceFragment(shoppingCartFragment)
+                }
                 R.id.ic_star -> replaceFragment(starFragment)
             }
             true
@@ -57,7 +63,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment){
         if(fragment != null){
-            val transaction = supportFragmentManager.beginTransaction()
+            val transaction = supportFragmentManager.beginTransaction().
+            setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
             transaction.replace(R.id.fragment_container, fragment)
             transaction.commit()
         }

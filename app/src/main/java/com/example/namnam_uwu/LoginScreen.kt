@@ -44,6 +44,7 @@ class LoginScreen : AppCompatActivity() {
 
                 val intent = Intent(this, HomeActivity::class.java )
                 startActivity(intent)
+                //overridePendingTransition(R.anim.from_left,R.anim.from_rigth)
 
                 /*
                 Esto es para trabajar en bases de datos
