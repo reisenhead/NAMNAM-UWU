@@ -3,6 +3,7 @@ package com.example.namnam_uwu.fragments
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -11,7 +12,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.namnam_uwu.HomeActivity
 import com.example.namnam_uwu.R
+import com.example.namnam_uwu.databinding.FragmentHomeBinding
+import com.example.namnam_uwu.databinding.FragmentMapBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -30,6 +34,7 @@ import com.google.android.gms.maps.model.MarkerOptions
         private lateinit var mMap: GoogleMap
         private lateinit var fusedLocation: FusedLocationProviderClient
         private var haConcedidoPermisos = false
+        private lateinit var binding: FragmentMapBinding
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             verificarPermisos()
@@ -153,6 +158,10 @@ import com.google.android.gms.maps.model.MarkerOptions
             super.onViewCreated(view, savedInstanceState)
             val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
             mapFragment?.getMapAsync(callback)
+            binding = FragmentMapBinding.bind(view)
+            binding.button.setOnClickListener {
+                startActivity(Intent(context, HomeActivity::class.java))
+            }
         }
 
     }
