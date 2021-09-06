@@ -19,6 +19,18 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="ModalBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <!-- Apply attributes here -->
+    </style>
+
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+    </style>
+
     <style name="Theme.NAMNAMUWU.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.NAMNAMUWU.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

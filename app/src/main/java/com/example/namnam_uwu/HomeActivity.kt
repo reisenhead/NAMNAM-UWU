@@ -18,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = ShoppingCartFragment()
-    private val starFragment = MapFragment()
+    private val starFragment = StarFragment()
 
 
     override fun onBackPressed() {
@@ -30,6 +30,9 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         replaceFragment(homeFragment)
+
+
+
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
@@ -38,6 +41,8 @@ class HomeActivity : AppCompatActivity() {
 
 
         }
+
+
 
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
