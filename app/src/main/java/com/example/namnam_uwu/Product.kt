@@ -11,9 +11,13 @@ class Product (
     val day: String,
     val amount : String,
     val star : String,
+    val preci : String,
+    val preciOld : String,
     val idImage: Int
 ): Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString()!!,
+        parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
@@ -32,6 +36,8 @@ class Product (
         parcel.writeString(day)
         parcel.writeString(amount)
         parcel.writeString(star)
+        parcel.writeString(preci)
+        parcel.writeString(preciOld)
         parcel.writeInt(idImage)
     }
 

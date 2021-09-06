@@ -43,6 +43,8 @@ class RecyclerAdapter(
         val hour = view.findViewById(R.id.watch) as TextView
         val day = view.findViewById(R.id.day) as TextView
         val amount = view.findViewById(R.id.available) as TextView
+        val preci= view.findViewById(R.id.tvPrice) as TextView
+        val preciOld= view.findViewById(R.id.tvPriceOld) as TextView
         val star = view.findViewById(R.id.like) as TextView
 
         //"atando" los datos a las Views
@@ -54,6 +56,8 @@ class RecyclerAdapter(
             hour.text = product.hour
             amount.text = product.amount
             day.text = product.day
+            preci.text = product.preci
+            preciOld.text = product.preciOld
             star.text = product.star
         }
     }
