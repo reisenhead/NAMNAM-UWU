@@ -14,6 +14,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.namnam_uwu.HomeActivity
 import com.example.namnam_uwu.R
+
+import com.example.namnam_uwu.databinding.FragmentHomeBinding
 import com.example.namnam_uwu.databinding.FragmentMapBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -142,7 +144,6 @@ class MapFragment : Fragment() {
         mMap.addMarker(MarkerOptions().position(losLoosers).title("Los lossers").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
         mMap.addMarker(MarkerOptions().position(laDocena).title("La docena").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
 
-        // minimo y maximo Zoom permitido
         mMap.setMinZoomPreference(13.0f)
         mMap.setMaxZoomPreference(16.0f)
 

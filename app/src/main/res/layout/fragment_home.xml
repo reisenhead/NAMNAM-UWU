@@ -47,7 +47,7 @@
             android:layout_width="100dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
-            android:layout_marginTop="0dp"
+            android:clickable="true"
             android:visibility="visible"
             app:cornerRadius="18dp"
             app:icon="@drawable/earth"
