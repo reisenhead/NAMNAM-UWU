@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.namnam_uwu.fragments.*
 
@@ -20,6 +22,8 @@ class HomeActivity : AppCompatActivity() {
     private val shoppingCartFragment = ShoppingCartFragment()
     private val starFragment = MapFragment()
 
+//    private lateinit var botonlistmap: Button
+//    private lateinit var botonworldmap: Button
 
     override fun onBackPressed() {
         replaceFragment(homeFragment)
@@ -30,8 +34,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         replaceFragment(homeFragment)
-
-
 
         if (savedInstanceState == null) {
             supportFragmentManager
@@ -55,7 +57,7 @@ class HomeActivity : AppCompatActivity() {
                 R.id.ic_shopping_cart -> {
                     replaceFragment(shoppingCartFragment)
                 }
-                R.id.ic_star -> replaceFragment(starFragment)
+               R.id.ic_star -> replaceFragment(starFragment)
             }
             true
         }

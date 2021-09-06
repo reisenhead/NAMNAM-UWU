@@ -20,7 +20,7 @@ android:id="@+id/fragment_container">
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,7 +39,7 @@ android:id="@+id/fragment_container">
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnMap"
         android:layout_width="100dp"
         android:layout_height="49dp"
         android:layout_gravity="center"
@@ -51,7 +51,7 @@ android:id="@+id/fragment_container">
         app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btnLista"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#FF000000" />
 </androidx.constraintlayout.widget.ConstraintLayout>

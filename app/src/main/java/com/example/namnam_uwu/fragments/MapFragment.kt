@@ -3,6 +3,7 @@ package com.example.namnam_uwu.fragments
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Bundle
@@ -12,7 +13,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.namnam_uwu.HomeActivity
 import com.example.namnam_uwu.R
+import com.example.namnam_uwu.databinding.FragmentHomeBinding
+import com.example.namnam_uwu.databinding.FragmentMapBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.LocationServices.getFusedLocationProviderClient
@@ -29,15 +33,17 @@ import java.security.acl.LastOwnerException
 
 class MapFragment : Fragment() {
 
-    private val CODIGO_PERMISOS_UBICACION_SEGUNDO_PLANO = 2106
-    private val LOG_TAG = "EnviarUbicacion"
-    private lateinit var mMap: GoogleMap
-    private lateinit var fusedLocation: FusedLocationProviderClient
-    private var haConcedidoPermisos = false
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        verificarPermisos()
-    }
+        private  val CODIGO_PERMISOS_UBICACION_SEGUNDO_PLANO = 2106
+        private  val LOG_TAG = "EnviarUbicacion"
+        private lateinit var mMap: GoogleMap
+        private lateinit var fusedLocation: FusedLocationProviderClient
+        private var haConcedidoPermisos = false
+        private lateinit var binding: FragmentMapBinding
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            verificarPermisos()
+        }
+
 
     private val callback = OnMapReadyCallback { googleMap ->
         fusedLocation = LocationServices.getFusedLocationProviderClient(activity as Context?)
@@ -199,11 +205,6 @@ class MapFragment : Fragment() {
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
-        mapFragment?.getMapAsync(callback)
-    }
 
     fun distanceKm(): Float {
         val fusedLocation = Location("localizacion 1")
@@ -220,8 +221,20 @@ class MapFragment : Fragment() {
 
 
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
+        binding = FragmentMapBinding.bind(view)
+        binding.btnMap.setOnClickListener {
+            startActivity(Intent(context, HomeActivity::class.java))
+        }
+    }
 
 }
+
+
+
 
 
 
