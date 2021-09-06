@@ -144,6 +144,7 @@ class MapFragment : Fragment() {
         mMap.addMarker(MarkerOptions().position(losLoosers).title("Los lossers").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
         mMap.addMarker(MarkerOptions().position(laDocena).title("La docena").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffe_map)))
 
+        //Minimo y maximo Zoom permitido
         mMap.setMinZoomPreference(13.0f)
         mMap.setMaxZoomPreference(16.0f)
 
@@ -153,6 +154,20 @@ class MapFragment : Fragment() {
 
     }
 
+    /*fun distanceKm(): Float {
+        val fusedLocation = Location("localizacion 1")
+        fusedLocation.latitude //latitud
+
+        fusedLocation.longitude //longitud
+
+        val elPescadito = Location("localizacion 2")
+        elPescadito.latitude = 19.4142968 //latitud
+
+        elPescadito.longitude = -99.1734571 //longitud
+
+        return fusedLocation.distanceTo(elPescadito) / 1000
+    }
+*/
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
