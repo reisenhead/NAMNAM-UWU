@@ -159,7 +159,7 @@ class MapFragment : Fragment() {
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
         binding = FragmentMapBinding.bind(view)
-        binding.button.setOnClickListener {
+        binding.button2.setOnClickListener {
             startActivity(Intent(context, HomeActivity::class.java))
         }
     }

@@ -3,9 +3,11 @@ package com.example.namnam_uwu
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import com.example.namnam_uwu.databinding.FragmentHomeBinding
 import com.example.namnam_uwu.fragments.*
 
 
@@ -30,8 +32,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         replaceFragment(homeFragment)
-
-
 
         if (savedInstanceState == null) {
             supportFragmentManager
@@ -69,4 +69,7 @@ class HomeActivity : AppCompatActivity() {
             transaction.commit()
         }
     }
+
+
+
 }

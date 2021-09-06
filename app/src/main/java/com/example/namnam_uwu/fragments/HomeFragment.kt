@@ -51,9 +51,12 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.bind(view)
 
         binding.buttonworld.setOnClickListener {
-            val fragment = MapFragment()
+
             val transaction = getFragmentManager()?.beginTransaction()
-            transaction?.replace(R.id.fragment_container, fragment)
+            transaction?.replace(R.id.fragment_container, MapFragment())
+            if (transaction != null) {
+                transaction.addToBackStack(null)
+            }
             transaction?.commit()
         }
         binding.buttonlist.setOnClickListener {
