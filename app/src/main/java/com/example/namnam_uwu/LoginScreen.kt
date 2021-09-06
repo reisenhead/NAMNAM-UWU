@@ -24,8 +24,8 @@ class LoginScreen : AppCompatActivity() {
         supportActionBar?.hide()
 
         boton = findViewById(R.id.iniciarSesionButton)
-        usuario = findViewById(R.id.nombrePlainText)
-        contrasenia = findViewById(R.id.passwordText)
+        usuario = findViewById(R.id.teCorreo)
+        contrasenia = findViewById(R.id.tePass)
 
 
         usuario.setOnClickListener{

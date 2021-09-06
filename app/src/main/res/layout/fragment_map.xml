@@ -20,15 +20,15 @@ android:id="@+id/fragment_container">
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:text="@string/buttonlist"
-        android:textColor="@color/black"
+        app:iconGravity="textStart"
+
         android:visibility="visible"
         app:cornerRadius="18dp"
         app:icon="@drawable/menu"
@@ -39,19 +39,20 @@ android:id="@+id/fragment_container">
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="49dp"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="0dp"
+        android:text="Mapa"
         android:visibility="visible"
         app:cornerRadius="18dp"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
         app:icon="@drawable/earth"
-        app:iconGravity="textStart"
         app:iconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="#FF000000" />
 </androidx.constraintlayout.widget.ConstraintLayout>

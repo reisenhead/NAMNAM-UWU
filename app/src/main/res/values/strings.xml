@@ -1,12 +1,17 @@
 <resources>
-    <string name="app_name">NAMNAM-UWU</string>
+    <string name="app_name">UWU</string>
     <string name="title_activity_register_screen">RegisterScreen</string>
 
     //registerscreen
     <string name="hello">Ingresa con</string>
     <string name="register_button">O REGÍSTRATE</string>
     <string name="login">¿Tienes una cuenta?</string>
-    <string name="login_button">INICIAR SESIÓN</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="Correo_Electronico">Correo electrónico</string>
+    <string name="Contrasena">Contraseña</string>
+    <string name="olvido_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="descripcion_logo_uwu">logo uwu</string>
+    <string name="descripcion_vector">vector</string>
 
     //loginscreen
     <string name="user">Nombre o username</string>
@@ -47,5 +52,7 @@
     <string name="price">$50</string>
     <string name="buttonlist">Lista</string>
     <string name="line"> <strike>$150</strike> </string>
+
+
 
 </resources>

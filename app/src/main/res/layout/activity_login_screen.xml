@@ -4,69 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginScreen" >
+    tools:context=".LoginScreen">
 
 
     <ImageView
-        android:id="@+id/logoOshko"
+        android:id="@+id/logoUwu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_oshko" />
+        app:srcCompat="@drawable/logo_uwu2"
+        android:contentDescription="@string/descripcion_logo_uwu" />
 
-    <EditText
-        android:id="@+id/nombrePlainText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/user"
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/accent1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoOshko" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="104dp"
+        android:hint="@string/Correo_Electronico"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/logoUwu">
 
-    <EditText
-        android:id="@+id/passwordText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="@string/password"
-        android:textColor="@color/accent1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrePlainText" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
 
-    <TextView
-        android:id="@+id/forgottenpassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/f_password"
-        android:textColor="@color/accent1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/Contrasena"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/tfCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tePass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/iniciarSesionButton"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/login_button"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/tfPass" />
+
+    <Button
+        android:id="@+id/btnOlvidaste"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primary1"
-        android:fontFamily="@font/roboto_bold"
-        android:text="@string/login_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:text="@string/olvido_contrasena"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/iniciarSesionButton" />
+
+
+    <ImageView
+        android:id="@+id/vector"
+        android:layout_width="466dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgottenpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/btnOlvidaste"
+        app:srcCompat="@drawable/vector"
+        android:contentDescription="@string/descripcion_vector" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
