@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var input: EditText
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
-    private val shoppingCartFragment = ShoppingCartFragment()
+    private val shoppingCartFragment = MainActivityApi()
     private val starFragment = MapFragment()
 
 //    private lateinit var botonlistmap: Button
@@ -61,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
                     replaceFragment(profileFragment)
                 }
                 R.id.ic_shopping_cart -> {
-                    replaceFragment(shoppingCartFragment)
+                    startActivity(Intent(this, MainActivityApi::class.java))
                 }
                R.id.ic_star -> replaceFragment(starFragment)
             }

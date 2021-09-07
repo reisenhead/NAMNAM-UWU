@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NAMNAMUWU">
-        <activity android:name=".CrearCuenta"></activity>
+        <activity android:name=".MainActivityApi"></activity>
+        <activity android:name=".CrearCuenta" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
