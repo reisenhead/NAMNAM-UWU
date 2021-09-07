@@ -1,7 +1,6 @@
-# NAMNAM-UWU
-# ShareLove  Equipo 3
+# UWU  Equipo 2
 
-![vista de calculadora](https://github.com/josechee/ShareLove/blob/dani/img/Logo-Sharelove.png)
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/app/src/main/res/drawable/LOGO%20uwu.jpg)
 
 <b>Proyecto UWU por Equipo 2  Becas Santander BEDU Desarrollo Móvil fase 3.</b>
 
@@ -50,6 +49,52 @@ puedes guardar un articulo que te guste y visualizarlo despues,puedes ver la dis
 
 
 Se pretende lanzarla a nivel nacional y ayudar a nuestro país y poner nuestro granito de arena para ayudar a todos nuestros hermanos.
+
+## OBJETIVO PRINCIPAL
+
+Disminuir el desperdicio de alimentos.
+
+
+
+## DESCRIPCIÓN
+
+Esta aplicación busca combatir el desperdicio de comida que se genera en los comercios dedicados a la venta de alimentos, ya sea porque están próximos a caducar o porque su fecha de consumo preferente ha pasado ya, pero el alimento sigue siendo consumible sin riesgo y satisfactorio para el usuario.
+
+
+
+## FUNCIONALIDADES
+
+La aplicación permitirá al usuario identificar:
+Locales afiliados en un mapa y lista.
+Información de cada uno de los locales: Tipo de comida, calificación otorgada por los usuarios, distancia a la que se encuentra del usuario.
+Promociones disponibles.
+Veces que las promociones han sido compradas.
+Sugerencias al usuario de acuerdo al historial de pedidos.
+Seguimiento de pedido.
+Cupones.
+
+
+## CARACTERISTICAS
+
+La aplicación se centrará en prevenir el desperdicio de comida en la zona Roma-Condesa de la Ciudad de México, pensando que esta es ideal al contar con una  gran cantidad de locales preocupados por el planeta.
+
+La identidad gráfica de UWU busca transmitir equilibrio, sustentabilidad, felicidad y frescura.
+
+El target en el que nos centraremos serán personas jóvenes oficinistas, que son consumidores asiduos de alimentos y bebidas, y que disfrutan probar nuevos productos, consentirse y compartir.
+
+
+## PANTALLA
+
+Home: Mapa, proximidad de locales asociados.
+
+Historial de pedidos: Lista de pedidos realizados, fecha, estatus del pedido, paquete comprado y método de pago.
+
+Cuenta: Nombre, teléfono asociado, correo asociado, cupones, métodos de pago, términos y condiciones, ayuda y cerrar sesión.
+
+Buscar: Search bar que mostrará tipo de comida, restaurante o pedidos disponibles al momento.
+
+Estatus del pedido: Hora de pedido realizado, distancia a la que se encuentra el local, si el producto está preparándose, ya está listo y si ya fue entregado.
+
 
 ## Design System
 
