@@ -39,6 +39,13 @@
     <string name="payment">Mis métodos de pago</string>
     <string name="address">Mis direcciones</string>
     <string name="settings">Configuración</string>
+    <string name="phone">+551122334455</string>
+    <string name="methods">Mtodos de pago</string>
+    <string name="email">correo@gmail.com</string>
+    <string name="coupons">Cupónes</string>
+    <string name="terms">Terminos y Condiciones</string>
+    <string name="help">Ayuda</string>
+    <string name="close">Cerrar sesión</string>
 
     //card
     <string name="package_card">Paquete</string>
