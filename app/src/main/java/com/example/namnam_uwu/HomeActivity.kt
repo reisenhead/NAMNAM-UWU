@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var boton: Button
     private lateinit var botontwo: Button
     private lateinit var input: EditText
-    private val homeFragment = HomeFragment()
+    private val homeFragment = CardsFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = MainActivityApi()
     private val starFragment = MapFragment()
@@ -40,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
         botontwo = findViewById(R.id.buttonlist)
         botontwo.setOnClickListener {
 
-            replaceFragment(starFragment)
+            replaceFragment(homeFragment)
         }
         boton = findViewById(R.id.buttonworld)
         boton.setOnClickListener {

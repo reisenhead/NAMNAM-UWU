@@ -169,7 +169,7 @@
         android:id="@+id/button6"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:text="help"
+        android:text="@string/help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
