@@ -45,7 +45,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/buttonlist"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="#FF000000" />
+             />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_container"
