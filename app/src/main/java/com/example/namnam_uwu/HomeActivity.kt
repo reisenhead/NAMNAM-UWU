@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.namnam_uwu.databinding.FragmentHomeBinding
@@ -14,6 +15,7 @@ import com.example.namnam_uwu.fragments.*
 
 
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_login_screen.*
 
 class HomeActivity : AppCompatActivity() {
 
@@ -37,6 +39,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         replaceFragment(homeFragment)
+        
 
         if (savedInstanceState == null) {
             supportFragmentManager
@@ -65,6 +68,9 @@ class HomeActivity : AppCompatActivity() {
             true
         }
     }
+
+
+
 
     private fun replaceFragment(fragment: Fragment){
         if(fragment != null){

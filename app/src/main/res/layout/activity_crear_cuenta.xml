@@ -19,21 +19,58 @@
         app:srcCompat="@drawable/logo_uwu2" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfNombre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/nombre_usuario"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/logoUwu">
+
+        <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/teNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfCorreo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/Correo_Electronico"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/logoUwu">
+        app:layout_constraintTop_toBottomOf="@+id/tfNombre">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/teCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tfTelefono"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/telefono"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/tfCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/teTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,7 +83,7 @@
         android:hint="@string/Contrasena"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/tfCorreo">
+        app:layout_constraintTop_toBottomOf="@+id/tfTelefono">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tePass"
@@ -57,11 +94,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnInicio"
+        android:id="@+id/btnCrearC"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/login_button"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_crear_cuenta"
         android:textAllCaps="false"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
@@ -69,43 +106,30 @@
         app:layout_constraintTop_toBottomOf="@+id/tfPass" />
 
     <Button
-        android:id="@+id/btnOlvidaste"
+        android:id="@+id/btnVolver"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/olvido_contrasena"
+        android:layout_marginTop="4dp"
+        android:text="@string/volver_inicio"
         android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/btnInicio" />
-
-    <Button
-        android:id="@+id/btnCrearC"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/btn_registro"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/btnOlvidaste" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearC" />
 
 
     <ImageView
         android:id="@+id/vector"
         android:layout_width="453dp"
         android:layout_height="179dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/descripcion_vector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
+        app:layout_constraintTop_toBottomOf="@+id/btnVolver"
         app:srcCompat="@drawable/vector" />
 
     <androidx.constraintlayout.widget.Guideline
