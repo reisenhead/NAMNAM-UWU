@@ -98,7 +98,7 @@ Estatus del pedido: Hora de pedido realizado, distancia a la que se encuentra el
 
 ## Design System
 
-Se realizo la Style Guide en figma utilizando los conocimientos adquiridos en la módulo 1 del curso 'UI Fundamental'
+Se realizó la Style Guide en figma utilizando los conocimientos adquiridos en la módulo 1 del curso 'UI Fundamental'
 
 https://www.figma.com/file/ifTzRBuENfb1uw6nDg3nBq/UWU?node-id=0%3A1
 
