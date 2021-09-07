@@ -36,16 +36,13 @@ Se eligió este proyecto, después de hacer una investigación, de como podemos 
 
 Siguiendo las estimaciones de la FAO sólo la capital mexicana tira a la basura cerca de 13,000 toneladas de comida cada día mientras que casi 15% de la población que habita la urbe presenta alguna carencia alimentaria.
 
-Share Love busca que las personas puedan intercambiar articulos que ellos no necesiten pero a otra persona le pueda servir.
-
-Recuerda que: <b>La basura de uno es el tesoro de otra</b>
+UWU busca que las personas puedan conseguir paquetes de comida economica, para no desperdiciarla.
 
 Las personas siempre están dispuestas a ayudar y apoyar al prójimo, es por eso que se toma la decisión de crear el proyecto <b> UWU. </b>
 
+A través de esta aplicación se tiene acceso a la creación de una cuenta, te permite autentificarte  al crear una cuenta con un correo valido, al crear la cuenta formas parte de la comunidad, ¿de que manera? Tienes acceso a una interfaz para realizar pedidos, pueder elejir una platillo que solo por el momento sería la condesa en la CD MX, pero pueda servir a alguien más, subes la descripción y la cantidad de productos que tienes disponible y otro usuario puede pedir y pasar por él.
 
-A través de esta aplicación se tiene acceso a la creación de una cuenta, te permite autentificarte  al crear una cuenta con un correo valido, al crear la cuenta formas parte de la comunidad de vecinos que ayudan, ¿de que manera? Tienes acceso a una interfaz para realizar donaciones, elijes un producto de tu casa o negocio que no necesites, pero pueda servir a alguien más, subes la descripción y la cantidad de productos que tienes disponible y otro vecino puede pedir y pasar por él.
-
-puedes guardar un articulo que te guste y visualizarlo despues,puedes ver la distancia en la que estan publicando el articulo, y lo mejor que puedes hacer nuevos amigos!!...
+Puedes guardar un platillo que te guste y visualizarlo despues,puedes ver la distancia en la que estan publicando el platillo y lo mejor que puedes contribuyes a no desperdiciar la comidad...
 
 
 Se pretende lanzarla a nivel nacional y ayudar a nuestro país y poner nuestro granito de arena para ayudar a todos nuestros hermanos.
@@ -62,7 +59,7 @@ Esta aplicación busca combatir el desperdicio de comida que se genera en los co
 
 
 
-## FUNCIONALIDADES
+## Funcionalidades
 
 La aplicación permitirá al usuario identificar:
 Locales afiliados en un mapa y lista.
@@ -74,7 +71,7 @@ Seguimiento de pedido.
 Cupones.
 
 
-## CARACTERISTICAS
+## Características
 
 La aplicación se centrará en prevenir el desperdicio de comida en la zona Roma-Condesa de la Ciudad de México, pensando que esta es ideal al contar con una  gran cantidad de locales preocupados por el planeta.
 
@@ -83,7 +80,7 @@ La identidad gráfica de UWU busca transmitir equilibrio, sustentabilidad, felic
 El target en el que nos centraremos serán personas jóvenes oficinistas, que son consumidores asiduos de alimentos y bebidas, y que disfrutan probar nuevos productos, consentirse y compartir.
 
 
-## PANTALLA
+## Pantallas
 
 Home: Mapa, proximidad de locales asociados.
 
