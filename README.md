@@ -1,6 +1,6 @@
 # UWU  Equipo 2
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/app/src/main/res/drawable/LOGO%20uwu.jpg)
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/app/src/main/res/drawable/logo_uwu.png)
 
 <b>Proyecto UWU por Equipo 2  Becas Santander BEDU Desarrollo Móvil fase 3.</b>
 
