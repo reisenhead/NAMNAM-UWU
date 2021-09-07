@@ -20,15 +20,12 @@ import kotlinx.android.synthetic.main.activity_login_screen.*
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var boton: Button
+    private lateinit var botontwo: Button
     private lateinit var input: EditText
     private val homeFragment = HomeFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = MainActivityApi()
     private val starFragment = MapFragment()
-
-//    private lateinit var botonlistmap: Button
-//    private lateinit var botonworldmap: Button
-
 
     override fun onBackPressed() {
         replaceFragment(homeFragment)
@@ -39,7 +36,17 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         replaceFragment(homeFragment)
-        
+
+        botontwo = findViewById(R.id.buttonlist)
+        botontwo.setOnClickListener {
+
+            replaceFragment(starFragment)
+        }
+        boton = findViewById(R.id.buttonworld)
+        boton.setOnClickListener {
+
+            replaceFragment(starFragment)
+        }
 
         if (savedInstanceState == null) {
             supportFragmentManager

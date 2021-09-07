@@ -53,19 +53,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentHomeBinding.bind(view)
 
-        binding.buttonworld.setOnClickListener {
-          
-            val fragment = MapFragment()
-            val transaction = getFragmentManager()?.beginTransaction()
-            transaction?.replace(R.id.fragment_container, fragment)
-            transaction?.addToBackStack(null)
-            transaction?.commit()
-        }
-        binding.buttonlist.setOnClickListener {
-            startActivity(Intent(context, HomeActivity::class.java))
-        }
 
 
 
