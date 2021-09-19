@@ -72,7 +72,6 @@
       android:layout_marginTop="240dp"
       android:fontFamily="Poppins"
       android:text="@string/line"
-      android:textAllCaps="false"
       android:textAppearance="?attr/textAppearanceBody2"
       android:textColor="@color/ColorGray"
       android:textSize="12sp"

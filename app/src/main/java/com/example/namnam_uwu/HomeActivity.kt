@@ -48,14 +48,14 @@ class HomeActivity : AppCompatActivity() {
             replaceFragment(starFragment)
         }
 
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_container, CardsFragment())
-                .commit()
-
-
-        }
+//        if (savedInstanceState == null) {
+//            supportFragmentManager
+//                .beginTransaction()
+//                .add(R.id.fragment_container, CardsFragment())
+//                .commit()
+//
+//
+//        }
 
 
 
