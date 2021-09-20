@@ -1,9 +1,10 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.namnam_uwu.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

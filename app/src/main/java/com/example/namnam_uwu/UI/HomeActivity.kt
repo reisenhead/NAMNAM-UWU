@@ -1,21 +1,18 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
-import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.example.namnam_uwu.databinding.FragmentHomeBinding
-import com.example.namnam_uwu.fragments.*
+import com.example.namnam_uwu.Fragments.CardsFragment
+import com.example.namnam_uwu.API.MainActivityApi
+import com.example.namnam_uwu.R
+import com.example.namnam_uwu.Fragments.*
 
 
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.activity_login_screen.*
 
 class HomeActivity : AppCompatActivity() {
 

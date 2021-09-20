@@ -1,4 +1,4 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.Fragments
 
 import android.os.Bundle
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.namnam_uwu.R
 import com.example.namnam_uwu.databinding.FragmentItemListDialogListDialogItemBinding
 import com.example.namnam_uwu.databinding.FragmentItemListDialogListDialogBinding
 

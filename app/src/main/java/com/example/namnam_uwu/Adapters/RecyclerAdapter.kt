@@ -1,4 +1,4 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.namnam_uwu.Models.Product
+import com.example.namnam_uwu.R
 
 class RecyclerAdapter(
     private val context: Context,

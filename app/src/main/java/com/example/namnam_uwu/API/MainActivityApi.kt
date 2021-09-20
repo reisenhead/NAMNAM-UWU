@@ -1,10 +1,12 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.API
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.namnam_uwu.Fragments.Pokemon
+import com.example.namnam_uwu.Extension.WebServices
 import com.example.namnam_uwu.databinding.ActivityMainApiBinding
 import com.squareup.picasso.Picasso
 import okhttp3.OkHttpClient

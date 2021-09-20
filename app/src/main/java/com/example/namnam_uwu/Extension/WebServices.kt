@@ -1,5 +1,7 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.Extension
 
+import com.example.namnam_uwu.Fragments.Pokemon
+import com.example.namnam_uwu.Models.Type
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

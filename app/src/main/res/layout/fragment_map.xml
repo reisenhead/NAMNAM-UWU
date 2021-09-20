@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".fragments.MapFragment"
+tools:context=".Fragments.MapFragment"
 android:id="@+id/fragment_container">
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
@@ -13,7 +13,7 @@ android:id="@+id/fragment_container">
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.MapFragment" />
+        tools:context=".Fragments.MapFragment" />
 
 
 

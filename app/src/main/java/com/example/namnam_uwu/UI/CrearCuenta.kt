@@ -1,11 +1,10 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.namnam_uwu.databinding.ActivityCrearCuentaBinding
-import kotlinx.android.synthetic.main.activity_login_screen.*
 
 class CrearCuenta : AppCompatActivity() {
 
@@ -20,7 +19,7 @@ class CrearCuenta : AppCompatActivity() {
         }
 
         binding.btnVolver.setOnClickListener{
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
         }
     }
 

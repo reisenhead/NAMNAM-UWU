@@ -1,9 +1,8 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.UI
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_register_screen.*
+import com.example.namnam_uwu.R
 
 class RegisterScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

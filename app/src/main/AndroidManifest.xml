@@ -13,26 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NAMNAMUWU">
-        <activity android:name=".MainActivityApi"></activity>
-        <activity android:name=".CrearCuenta" />
+        <activity android:name=".API.MainActivityApi"></activity>
+        <activity android:name=".UI.CrearCuenta" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".UI.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".UI.LoginScreen"
             android:exported="true" />
         <activity
-            android:name=".RegisterScreen"
+            android:name=".UI.RegisterScreen"
             android:exported="true"
             android:label="@string/title_activity_register_screen"
             android:theme="@style/Theme.NAMNAMUWU.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

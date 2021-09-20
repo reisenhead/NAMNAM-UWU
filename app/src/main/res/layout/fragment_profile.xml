@@ -140,7 +140,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/button5"
@@ -155,7 +156,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/button3"
@@ -170,7 +172,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/button6"
@@ -185,7 +188,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        tools:ignore="RtlHardcoded" />
 
     <Button
         android:id="@+id/button7"
@@ -200,5 +204,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        tools:ignore="RtlHardcoded" />
 </androidx.constraintlayout.widget.ConstraintLayout>

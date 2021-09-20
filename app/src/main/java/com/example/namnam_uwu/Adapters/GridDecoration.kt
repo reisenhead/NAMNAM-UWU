@@ -1,4 +1,4 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.Adapters
 
 import android.graphics.Rect
 import android.view.View

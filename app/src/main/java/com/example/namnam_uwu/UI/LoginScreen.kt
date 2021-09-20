@@ -1,4 +1,4 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.namnam_uwu.R
 import kotlinx.android.synthetic.main.activity_login_screen.*
-import kotlinx.android.synthetic.main.activity_register_screen.*
 
 
 class LoginScreen : AppCompatActivity() {

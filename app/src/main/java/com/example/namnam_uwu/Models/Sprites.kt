@@ -1,4 +1,4 @@
-package com.example.namnam_uwu
+package com.example.namnam_uwu.Models
 
 import com.google.gson.annotations.SerializedName
 
