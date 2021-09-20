@@ -65,5 +65,9 @@
     <string name="nombre_usuario">Nombre completo</string>
     <string name="telefono">Teléfono</string>
 
-
+    //Fragment
+    <string name="Methods">Metodos de Pago</string>
+    <string name="Help">Ayuda</string>
+    <string name="Coupons">Cupones</string>
+    <string name="Terms">Terminos y Condiciones</string>
 </resources>

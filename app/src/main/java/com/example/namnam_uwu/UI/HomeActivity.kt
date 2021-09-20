@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var input: EditText
     private val homeFragment = CardsFragment()
     private val profileFragment = ProfileFragment()
-    private val shoppingCartFragment = MainActivityApi()
+    private val shoppingCartFragment = ShoppingCartFragment()
     private val starFragment = MapFragment()
 
     override fun onBackPressed() {
@@ -55,7 +55,8 @@ class HomeActivity : AppCompatActivity() {
                     replaceFragment(profileFragment)
                 }
                 R.id.ic_shopping_cart -> {
-                    startActivity(Intent(this, MainActivityApi::class.java))
+//                    startActivity(Intent(this, MainActivityApi::class.java))
+                    replaceFragment(shoppingCartFragment)
                 }
                R.id.ic_star -> replaceFragment(starFragment)
             }
