@@ -1,12 +1,14 @@
 package com.example.namnam_uwu.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.example.namnam_uwu.R
-
+import com.example.namnam_uwu.UI.LoginScreen
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,7 +36,11 @@ class ProfileFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
+    private lateinit var buttonone: Button
+    private lateinit var buttoncupon: Button
+    private lateinit var buttonterminos: Button
+    private lateinit var buttonayuda: Button
+    private lateinit var buttoncerrar: Button
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,8 +48,35 @@ class ProfileFragment : Fragment() {
 
         val view =  inflater.inflate(R.layout.fragment_profile, container, false)
 
+        buttonone = view.findViewById<Button>(R.id.button4)
+        buttoncupon = view.findViewById<Button>(R.id.button5)
+        buttonterminos = view.findViewById<Button>(R.id.button3)
+        buttonayuda = view.findViewById<Button>(R.id.button6)
+        buttoncerrar = view.findViewById<Button>(R.id.button7)
+        buttonone.setOnClickListener {
+            val fr = fragmentManager?.beginTransaction()
+            fr?.replace(R.id.fragment_container, PaymentMethodsFragment())
+            fr?.commit()
+        }
+        buttoncupon.setOnClickListener {
+            val fr = fragmentManager?.beginTransaction()
+            fr?.replace(R.id.fragment_container, CouponsFragment())
+            fr?.commit()
+        }
+        buttonterminos.setOnClickListener {
+            val fr = fragmentManager?.beginTransaction()
+            fr?.replace(R.id.fragment_container, TermsandConditionsFragment())
+            fr?.commit()
+        }
+        buttonayuda.setOnClickListener {
+            val fr = fragmentManager?.beginTransaction()
+            fr?.replace(R.id.fragment_container, HelpFragment())
+            fr?.commit()
+        }
+        buttoncerrar.setOnClickListener {
 
-
+            startActivity(Intent(context, LoginScreen::class.java))
+        }
 
         return view
     }
