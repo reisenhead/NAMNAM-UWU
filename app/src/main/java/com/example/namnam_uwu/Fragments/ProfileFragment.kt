@@ -2,10 +2,12 @@ package com.example.namnam_uwu.Fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.v4.media.session.PlaybackStateCompat
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationSet
 import android.widget.Button
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.UI.LoginScreen
@@ -55,21 +57,25 @@ class ProfileFragment : Fragment() {
         buttoncerrar = view.findViewById<Button>(R.id.button7)
         buttonone.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
+            fr!!.setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
             fr?.replace(R.id.fragment_container, PaymentMethodsFragment())
             fr?.commit()
         }
         buttoncupon.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
+            fr!!.setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
             fr?.replace(R.id.fragment_container, CouponsFragment())
             fr?.commit()
         }
         buttonterminos.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
+            fr!!.setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
             fr?.replace(R.id.fragment_container, TermsandConditionsFragment())
             fr?.commit()
         }
         buttonayuda.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
+            fr!!.setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
             fr?.replace(R.id.fragment_container, HelpFragment())
             fr?.commit()
         }
