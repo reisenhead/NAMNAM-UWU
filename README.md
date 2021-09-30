@@ -23,7 +23,7 @@ Este proyecto es elaborado por:
 RECUERDA utilizar este correo y contraseña para acceder:
 
 - correo: usuario@gmail.com
-- password: 1234 
+- password: 123456
 
 
 
