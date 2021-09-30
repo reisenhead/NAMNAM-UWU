@@ -9,8 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationSet
 import android.widget.Button
+import android.widget.TextView
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.UI.LoginScreen
+import com.example.namnam_uwu.UI.email
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,6 +48,14 @@ class ProfileFragment : Fragment() {
     private lateinit var buttonterminos: Button
     private lateinit var buttonayuda: Button
     private lateinit var buttoncerrar: Button
+
+    private lateinit var user: TextView
+    private lateinit var description: TextView
+    private lateinit var correo: TextView
+    private lateinit var imageProfile: CircleImageView
+
+    private val db = FirebaseFirestore.getInstance()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,6 +68,21 @@ class ProfileFragment : Fragment() {
         buttonterminos = view.findViewById<Button>(R.id.button3)
         buttonayuda = view.findViewById<Button>(R.id.button6)
         buttoncerrar = view.findViewById<Button>(R.id.button7)
+        user = view.findViewById(R.id.username)
+        description = view.findViewById(R.id.tvDescription)
+        correo = view.findViewById(R.id.tvCorreo)
+        imageProfile = view.findViewById(R.id.profile_image)
+
+
+        //Recuperamos los datos del usuario
+        db.collection("users").document(email).get().addOnSuccessListener {
+            user.text = it.get("user") as String?
+            if(it.get("description") != null)
+                description.text = it.get("description") as String?
+            correo.text = email
+        }
+
+
         buttonone.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
             fr!!.setCustomAnimations(R.anim.left_in,0,0, R.anim.left_out)
@@ -80,7 +108,7 @@ class ProfileFragment : Fragment() {
             fr?.commit()
         }
         buttoncerrar.setOnClickListener {
-
+            FirebaseAuth.getInstance().signOut()
             startActivity(Intent(context, LoginScreen::class.java))
         }
 

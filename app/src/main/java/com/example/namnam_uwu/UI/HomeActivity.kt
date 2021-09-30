@@ -14,6 +14,13 @@ import com.example.namnam_uwu.Fragments.*
 
 import kotlinx.android.synthetic.main.activity_home.*
 
+enum class ProvidertType{
+    BASIC
+}
+
+var email = String()
+var provider = String()
+
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var boton: Button
@@ -24,11 +31,17 @@ class HomeActivity : AppCompatActivity() {
     private val shoppingCartFragment = ShoppingCartFragment()
     private val starFragment = MapFragment()
 
+
     override fun onBackPressed() {
         replaceFragment(homeFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //Recuperando los datos del usuario
+        val bundle = intent.extras
+        email = bundle?.getString("email").toString()
+        provider = bundle?.getString("provider").toString()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
