@@ -3,97 +3,89 @@ package com.example.namnam_uwu.UI
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.namnam_uwu.R
-import kotlinx.android.synthetic.main.activity_login_screen.*
+import androidx.appcompat.app.AlertDialog
+import com.example.namnam_uwu.Data.AddData
+import com.example.namnam_uwu.databinding.ActivityLoginScreenBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class LoginScreen : AppCompatActivity() {
+
+    private lateinit var binding : ActivityLoginScreenBinding
 
     private lateinit var boton: Button
     private lateinit var boton2: Button
     private lateinit var usuario: EditText
     private lateinit var contrasenia: EditText
 
+    private val auth = Firebase.auth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_screen)
+        binding = ActivityLoginScreenBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
 
-
-        boton = findViewById(R.id.btnInicio)
-        boton2 = findViewById(R.id.btnCrearC)
-        usuario = findViewById(R.id.teCorreo)
-        contrasenia = findViewById(R.id.tePass)
+        boton = binding.btnInicio
+        boton2 = binding.btnCrearC
+        usuario = binding.teCorreo
+        contrasenia = binding.tePass
 
 
         boton.setOnClickListener{
-            iniciarSesion()
+            login()
         }
         boton2.setOnClickListener{
             startActivity(Intent(this, CrearCuenta::class.java))
         }
 
 
-
-
-        /*boton.setOnClickListener {
-            if(usuario.text != null && contrasenia.text != null){
-                val usuarioText = usuario.text.toString()
-                val contraseniaText = contrasenia.text.toString()
-
-                val intent = Intent(this, HomeActivity::class.java )
-                startActivity(intent)
-                //overridePendingTransition(R.anim.from_left,R.anim.from_rigth)
-
-                *//*
-                Esto es para trabajar en bases de datos
-
-                if( positionUser >= 0){
-                    val intent = Intent(this, HomeActivity::class.java )
-                    startActivity(intent)
-                }
-                else{
-                    Toast.makeText(this, "Usuario y/o contraseña incorrectos", Toast.LENGTH_SHORT).show()
-                }
-
-                 *//*
-            }
-            else{
-                Toast.makeText(this, "Rellene los campos", Toast.LENGTH_SHORT).show()
-            }
-        }*/
-
-
     }
 
-    private fun iniciarSesion() {
-        val correo: String = teCorreo.getText().toString()
-        val pass: String = tePass.getText().toString()
+    private fun login(){
+        if(binding.teCorreo.text != null && binding.tePass.text != null){
+            val correo = binding.teCorreo.text.toString()
+            val pass = binding.tePass.text.toString()
+            if(correo == "admin" && pass == "admin"){
+                startActivity(Intent(this,AddData::class.java))
+            }
 
-        when {
-            correo.length == 0 && pass.length == 0 -> {
-                Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_LONG).show()
-            }
-            pass.length == 0 -> {
-                Toast.makeText(this,"Debes ingresar una contraseña", Toast.LENGTH_LONG).show()
-            }
-            correo.length == 0 -> {
-                Toast.makeText(this,"Debes ingresar un correo", Toast.LENGTH_LONG).show()
-            }
-            correo != "usuario@gmail.com" || pass != "1234" -> {
-                Toast.makeText(this, "Los datos no son validos", Toast.LENGTH_LONG).show()
-            }
-            correo == "usuario@gmail.com" && pass == "1234" -> {
-                Toast.makeText(this,"Bienvenido de nuevo!!", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, HomeActivity::class.java))
-
+            auth.signInWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
+                    if(it.isSuccessful){
+                        showHome(it.result?.user?.email ?: "" , ProvidertType.BASIC)
+                    }
+                    else{
+                        //Log.e("login", "Los datos de usuario son $correo y  $pass ")
+                        showAlert()
+                    }
             }
         }
-
+        else{
+            Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_LONG).show()
+        }
     }
+
+    private fun showAlert(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Error")
+        builder.setMessage("Se ha producido un error autenticando al usuario")
+        builder.setPositiveButton("Aceptar", null)
+        val dialog : AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun showHome(email: String, provider: ProvidertType){
+        val homeIntent = Intent(this, HomeActivity::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
+        }
+        startActivity(homeIntent)
+    }
+
 }

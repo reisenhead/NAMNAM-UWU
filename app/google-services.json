@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "331140702228",
+    "project_id": "namnamuwu-2021",
+    "storage_bucket": "namnamuwu-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331140702228:android:f1895454c4c514f065c701",
+        "android_client_info": {
+          "package_name": "com.example.namnam_uwu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331140702228-s2jc19v0ipmsg8oae3b19vug43qvad9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu0Eq-dkNEWbgl200SFfFu2Z8TlVFWqeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331140702228-s2jc19v0ipmsg8oae3b19vug43qvad9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
