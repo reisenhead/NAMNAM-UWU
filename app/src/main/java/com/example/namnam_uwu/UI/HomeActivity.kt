@@ -29,8 +29,8 @@ class HomeActivity : AppCompatActivity() {
     private val homeFragment = CardsFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = ShoppingCartFragment()
-    private val starFragment = MapFragment()
-
+    private val starFragment = StarFragment()
+    private val mapGoogle = MapFragment()
 
     override fun onBackPressed() {
         replaceFragment(homeFragment)
@@ -55,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         boton = findViewById(R.id.buttonworld)
         boton.setOnClickListener {
 
-            replaceFragment(starFragment)
+            replaceFragment(mapGoogle)
         }
 
 

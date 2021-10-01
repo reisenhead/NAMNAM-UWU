@@ -65,9 +65,37 @@
     <string name="nombre_usuario">Nombre completo</string>
     <string name="telefono">Teléfono</string>
 
-    //Fragment
+    //Fragment Profile
     <string name="Methods">Metodos de Pago</string>
     <string name="Help">Ayuda</string>
     <string name="Coupons">Cupones</string>
     <string name="Terms">Terminos y Condiciones</string>
+
+    //Fragment Star
+    <string name="orders">Mis pedidos</string>
+    <string name="my_orders">Mi pedido</string>
+    <string name="my_package">Paquete Desayuno</string>
+
+    //Package Garufa
+    <string name="packageorder">Fonda Garufa</string>
+    <string name="destiny">En camino</string>
+    <string name="cost">$150</string>
+    <string name="imagerest">restaurante</string>
+    <string name="icondistiny">destino</string>
+    <string name="icon"> </string>
+
+    //Package Green Grass Condesa
+    <string name="packageorderone">Green Grass Condesa</string>
+    <string name="destinyone">Entregado</string>
+    <string name="costone">$100</string>
+    <string name="imagerestone">restaurante</string>
+    <string name="icondistinyone">destino</string>
+    <string name="iconone"> </string>
+
+    //Package El pescadito
+    <string name="packageordertwo">El pescadito</string>
+    <string name="costtwo">$125</string>
+    <string name="imageresttwo">restaurante</string>
+    <string name="icontwo"> </string>
+
 </resources>
