@@ -12,15 +12,53 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="256dp"
-            android:layout_height="585dp"
-            android:text="@string/Terms"
-            android:textSize="45sp"
+            android:id="@+id/textCoupons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/term"
+            android:textColor="@color/black"
+            android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/term"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCoupons" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/termText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <Button
+            android:id="@+id/buttonaddcoupons"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="316dp"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/signo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textCoupons"
+            tools:ignore="RtlHardcoded" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

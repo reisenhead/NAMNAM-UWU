@@ -301,7 +301,7 @@
             android:layout_marginStart="184dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/white"
-            android:text="@string/totalcost"
+            android:text="@string/costBreak"
             android:textColor="@color/ColorPreci"
             android:textSize="24sp"
             android:textStyle="bold"
