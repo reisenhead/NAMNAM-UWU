@@ -133,5 +133,37 @@
     <string name="optionpay">Efectivo</string>
     <string name="total">Total</string>
     <string name="totalcost">$150</string>
+    <string name="eggs">Huevos Ahogados</string>
+    <string name="eggscost">$25</string>
+    <string name="juice">Jugo Buena Digestión</string>
+    <string name="juicecost">$15</string>
+    <string name="coffe">Café</string>
+    <string name="coffecost">$10</string>
+    <string name="hot_cakes">Hot Cakes Tradicionales</string>
+    <string name="hot_cakes_cost">$20</string>
+
+    //Metodos de pago
+    <string name="carAdd">Tarjeta de Débito o Crédito</string>
+    <string name="carText">Visa, MasterCard, American Express</string>
+    <string name="carPay">Mercado Pago</string>
+    <string name="caradd">Agrega una Tarjeta</string>
+    <string name="carPayText">Agrega una cuenta de Mercado Libre</string>
+    <string name="carname">Nombre del tarjeta habiente</string>
+    <string name="carnamehint">Nombre Completo</string>
+    <string name="carnum">Numero de Tarjeta</string>
+    <string name="number">0000 0000 0000 0000</string>
+    <string name="vencimiento">MM/AA</string>
+    <string name="vencimientoTEXT">Vencimiento</string>
+    <string name="addButton">Agregar</string>
+    <string name="codigo">Codigo de Seguridad</string>
+    <string name="cvv">CVV</string>
+
+    //Cupones
+    <string name="addcoupons">Cupones Promocionales</string>
+    <string name="couponsname">Agregar Código</string>
+
+    //Terminos y Condiciones
+    <string name="term">Términos y Condiciones</string>
+    <string name="termText">de uso para usuarios uwu</string>
 
 </resources>
