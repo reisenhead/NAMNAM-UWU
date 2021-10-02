@@ -31,6 +31,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imagen_de_perfil">Imagen de perfil</string>
     <string name="imagen_de_fondo">Imagen de fondo</string>
+    <string name="button_map">MAPA</string>
+    <string name="button_list">LISTA</string>
 
     //profilescreen
     <string name="username">Persona</string>
@@ -97,5 +99,39 @@
     <string name="costtwo">$125</string>
     <string name="imageresttwo">restaurante</string>
     <string name="icontwo">  </string>
+
+    //Package Amamba
+    <string name="packageorderthree">Amamba</string>
+    <string name="costthree">$50</string>
+    <string name="imageresthree">restaurante</string>
+    <string name="iconthree"> </string>
+
+    //Package Forever
+    <string name="packageorderfour">Forever</string>
+    <string name="costfour">$200</string>
+    <string name="imagerestfour">restaurante</string>
+    <string name="iconfour"> </string>
+
+    //My order
+    <string name="myOrder">Mi Pedido</string>
+
+    //BreakFast
+    <string name="breakFast">Paquete Desayuno</string>
+    <string name="logo">logo</string>
+    <string name="costBreak">$70</string>
+
+    //Lasagna
+    <string name="lasagna">Lasagña de Carne</string>
+    <string name="costBreakone">$50</string>
+
+    //Postres
+    <string name="postres">Paquete Postres</string>
+    <string name="costpostres">$30</string>
+    <string name="delivery">Entrega</string>
+    <string name="option">Recoge en tienda de 8:00-00:00</string>
+    <string name="pay">Pago</string>
+    <string name="optionpay">Efectivo</string>
+    <string name="total">Total</string>
+    <string name="totalcost">$150</string>
 
 </resources>
