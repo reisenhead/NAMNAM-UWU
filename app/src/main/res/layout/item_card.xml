@@ -6,18 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    android:clickable="true"
-    android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
     android:padding="30dp"
+    android:id="@+id/card_view"
     app:cardBackgroundColor="@color/ColorCard"
     app:cardCornerRadius="10dp"
     app:cardElevation="8dp">
 
  <androidx.constraintlayout.widget.ConstraintLayout
      android:id="@+id/layoutAnimal"
-     android:layout_width="390dp"
-     android:layout_height="320dp"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
      android:orientation="vertical">
 
   <ImageView
@@ -25,11 +24,61 @@
       android:layout_width="390dp"
       android:layout_height="180dp"
       android:contentDescription="@+Product/tvProduct"
+      android:scaleType="centerCrop"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/breakfast"
-      android:scaleType="centerCrop"/>
+      app:srcCompat="@drawable/breakfast" />
+
+
+  <ImageView
+      android:id="@+id/deleteButton"
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="20dp"
+      android:background="@color/accent1"
+      android:contentDescription="eliminar"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/day"
+      app:srcCompat="@drawable/ic_down" />
+
+
+  <TextView
+      android:id="@+id/quantityToAdd"
+      android:layout_width="11dp"
+      android:layout_height="31dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="18dp"
+      android:text="1"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toEndOf="@+id/deleteButton"
+      app:layout_constraintTop_toBottomOf="@+id/day" />
+
+
+  <ImageView
+      android:id="@+id/addButton"
+      android:layout_width="25dp"
+      android:layout_height="25dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="20dp"
+      android:background="@color/accent1"
+      android:contentDescription="agregar"
+      app:layout_constraintStart_toEndOf="@+id/quantityToAdd"
+      app:layout_constraintTop_toBottomOf="@+id/day"
+      app:srcCompat="@drawable/ic_up" />
+
+
+  <Button
+      android:id="@+id/buttonShoppingCart"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="18dp"
+      android:layout_marginTop="13dp"
+      android:text="Agregar al carrito"
+      app:layout_constraintStart_toEndOf="@+id/addButton"
+      app:layout_constraintTop_toBottomOf="@+id/watch" />
 
   <TextView
       android:id="@+id/tvProduct"
@@ -56,9 +105,9 @@
       android:fontFamily="Poppins"
       android:text="@string/price"
       android:textAppearance="?attr/textAppearanceBody2"
+      android:textColor="@color/ColorPreci"
       android:textSize="26sp"
       android:textStyle="bold"
-      android:textColor="@color/ColorPreci"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.9"
       app:layout_constraintStart_toStartOf="parent"
@@ -160,8 +209,8 @@
       android:fontFamily="Poppins"
       android:gravity="center"
       android:text="@string/day"
-      android:textStyle="bold"
       android:textAppearance="?attr/textAppearanceBody2"
+      android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toEndOf="@+id/hour"

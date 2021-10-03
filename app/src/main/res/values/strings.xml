@@ -52,7 +52,7 @@
     //card
     <string name="package_card">Paquete</string>
     <string name="place">Restaurant</string>
-    <string name="distance">Distancia</string>
+    <string name="distance">8</string>
     <string name="hour">Hora</string>
     <string name="distance_km">km</string>
     <string name="day">Mañana:</string>
@@ -168,5 +168,6 @@
 
     //Otros
     <string name="local">Establecimientos</string>
+    <string name="signo">$</string>
 
 </resources>

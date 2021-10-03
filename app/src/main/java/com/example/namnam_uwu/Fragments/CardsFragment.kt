@@ -2,14 +2,26 @@ package com.example.namnam_uwu.Fragments
 
 import android.os.Bundle
 import android.view.*
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.namnam_uwu.Adapters.CustomAdapter2
 import com.example.namnam_uwu.Adapters.GridDecoration
 import com.example.namnam_uwu.Models.Product1
 import com.example.namnam_uwu.Adapters.RecyclerAdapter
 import com.example.namnam_uwu.R
+import com.example.namnam_uwu.UI.num
+import com.example.namnam_uwu.UI.positionE
+import com.example.namnam_uwu.UI.products
+import com.example.namnam_uwu.UI.titles
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.recyclerView2
 import kotlinx.android.synthetic.main.fragment_home2.view.*
+import kotlinx.android.synthetic.main.fragment_product.view.*
 
 
 class CardsFragment : Fragment() {
@@ -27,9 +39,92 @@ class CardsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home2, container, false)
         // seteando el appbar como action bar
         //val appBar = view.findViewById<Toolbar>(R.id.app_bar)
-
-
         setUpRecyclerView(view)
+
+        val recyclerView2 = view.findViewById<RecyclerView>(R.id.recyclerProducts)
+        val adapter = CustomAdapter2()
+
+        recyclerView2.adapter = adapter
+        var boolStar = true
+
+        adapter.setOnItemClickListener(object : CustomAdapter2.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+            }
+
+            override fun onImageAddClick(position: Int, button: ImageView, text: TextView, precioText: TextView) {
+                var aux1  = text.text.toString().toInt()
+                aux1 += 1
+                text.text = "$aux1"
+                precioText.setText("${aux1.toFloat() * products.myProducts[position + num].price}" )
+            }
+
+            override fun onImageDeleteClick(position: Int, button: ImageView, text: TextView, precioText: TextView) {
+                var aux1  = text.text.toString().toInt()
+                if(aux1 > 0)
+                    aux1 -= 1
+                text.text = "$aux1"
+                precioText.setText("${aux1.toFloat() * products.myProducts[position + num].price}" )
+            }
+
+            override fun onStarSelected(position: Int, button: ImageView) {
+
+                if(!boolStar){
+                    getContext()?.getResources()?.getColor(R.color.auxiliarColor1)?.let {
+                        button.setColorFilter(
+                            it
+                        )
+                    };
+                    var i = 0
+                    for(favorite in products.myFavorites){
+                        if(products.myProducts[position + num].id == favorite.id){
+                            products.myFavorites.removeAt(i)
+                            Toast.makeText(activity, "Se ha desagregado de favoritos", Toast.LENGTH_SHORT).show()
+                        }
+                        i+=1
+                    }
+
+
+                    boolStar = true
+                }
+                else{
+                    getContext()?.getResources()?.getColor(R.color.auxiliarColor2)?.let {
+                        button.setColorFilter(
+                            it
+                        )
+                    };
+
+                    var aux2 = false
+
+                    for(favorite in products.myFavorites){
+                        if(products.myProducts[position + num].id.toString().toInt() == favorite.id.toString().toInt()){
+                            aux2 = true
+                        }
+                    }
+                    if(!aux2){
+                        val aux3 = products.myProducts[position + num]
+                        products.myFavorites.add(aux3)
+                        Toast.makeText(activity, "Se ha agregado a favoritos", Toast.LENGTH_SHORT).show()
+                    }
+
+
+                    boolStar = false
+                }
+            }
+
+            override fun onButtonSelected(position: Int, text: TextView, precioText: TextView) {
+                var aux1 = text.text.toString().toInt()
+                var aux2 = products.myProducts[position + num]
+                aux2.quantity += aux1
+                products.addProduct(aux2)
+                text.text = "1"
+                precioText.setText("${products.myProducts[position + num].price}")
+            }
+
+
+        })
+
+
         return view
     }
 
