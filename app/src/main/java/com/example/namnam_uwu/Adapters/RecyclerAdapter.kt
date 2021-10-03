@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.namnam_uwu.Models.Product
+import com.example.namnam_uwu.Models.Product1
 import com.example.namnam_uwu.R
 
 class RecyclerAdapter(
     private val context: Context,
-    private val products: MutableList<Product>,
-    private val clickListener: (Product) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+    private val products: MutableList<Product1>,
+    private val clickListener: (Product1) -> Unit): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     //Aquí atamos el ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -50,7 +50,7 @@ class RecyclerAdapter(
         val star = view.findViewById(R.id.like) as TextView
 
         //"atando" los datos a las Views
-        fun bind(product: Product, context: Context){
+        fun bind(product: Product1, context: Context){
             productName.text = product.paquete
             restaurnat.text = product.restaurant
             distance.text = product.distance

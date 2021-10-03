@@ -7,12 +7,11 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.example.namnam_uwu.Fragments.CardsFragment
-import com.example.namnam_uwu.API.MainActivityApi
+import com.example.namnam_uwu.Controller.RegisterProduct
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.Fragments.*
-
-
 import kotlinx.android.synthetic.main.activity_home.*
+
 
 enum class ProvidertType{
     BASIC
@@ -21,15 +20,27 @@ enum class ProvidertType{
 var email = String()
 var provider = String()
 
+const val USER_NAME = "com.example.namnam_uwu.UI.USER_NAME"
+
+var num = 0
+var positionE = 0
+var titles = mutableListOf("Amamba", "Cachito Mío", "Forever", "Forte", "Green Grass", "La Docena", "La Pitahaya Vegana", "Los Loosers", "Ramen Bar", "Soul La Roma")
+var tittle = titles[0]
+var sizeOfProducts = 5
+
+var products = RegisterProduct()
+
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var boton: Button
     private lateinit var botontwo: Button
     private lateinit var input: EditText
-    private val homeFragment = CardsFragment()
+    private val cardFragment = CardsFragment()
     private val profileFragment = ProfileFragment()
     private val shoppingCartFragment = ShoppingCartFragment()
     private val starFragment = StarFragment()
+    private val homeFragment = HomeFragment()
+
     private val mapGoogle = MapFragment()
 
     override fun onBackPressed() {
@@ -50,7 +61,7 @@ class HomeActivity : AppCompatActivity() {
         botontwo = findViewById(R.id.buttonlist)
         botontwo.setOnClickListener {
 
-            replaceFragment(homeFragment)
+            replaceFragment(cardFragment)
         }
         boton = findViewById(R.id.buttonworld)
         boton.setOnClickListener {

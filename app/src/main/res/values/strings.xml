@@ -166,4 +166,7 @@
     <string name="term">Términos y Condiciones</string>
     <string name="termText">de uso para usuarios uwu</string>
 
+    //Otros
+    <string name="local">Establecimientos</string>
+
 </resources>
