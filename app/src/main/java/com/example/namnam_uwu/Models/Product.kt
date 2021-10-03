@@ -3,7 +3,7 @@ package com.example.namnam_uwu.Models
 import android.os.Parcel
 import android.os.Parcelable
 
-class Product (
+class Product1 (
     val paquete: String,
     val restaurant: String,
     val distance: String,
@@ -45,12 +45,12 @@ class Product (
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Product> {
-        override fun createFromParcel(parcel: Parcel): Product {
-            return Product(parcel)
+    companion object CREATOR : Parcelable.Creator<Product1> {
+        override fun createFromParcel(parcel: Parcel): Product1 {
+            return Product1(parcel)
         }
 
-        override fun newArray(size: Int): Array<Product?> {
+        override fun newArray(size: Int): Array<Product1?> {
             return arrayOfNulls(size)
         }
     }
