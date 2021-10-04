@@ -41,10 +41,11 @@ class CardsFragment : Fragment() {
         //val appBar = view.findViewById<Toolbar>(R.id.app_bar)
         setUpRecyclerView(view)
 
-        val recyclerView2 = view.findViewById<RecyclerView>(R.id.recyclerProducts)
+//        val recyclerView2 = view.findViewById<RecyclerView>(R.id.recyclerProducts)
+
         val adapter = CustomAdapter2()
 
-        recyclerView2.adapter = adapter
+//        recyclerView2.adapter = adapter
         var boolStar = true
 
         adapter.setOnItemClickListener(object : CustomAdapter2.onItemClickListener{

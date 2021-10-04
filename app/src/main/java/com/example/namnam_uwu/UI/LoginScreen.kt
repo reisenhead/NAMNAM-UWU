@@ -39,8 +39,9 @@ class LoginScreen : AppCompatActivity() {
 
 
         boton.setOnClickListener{
-            login()
+                login()
         }
+
         boton2.setOnClickListener{
             startActivity(Intent(this, CrearCuenta::class.java))
         }
@@ -49,28 +50,58 @@ class LoginScreen : AppCompatActivity() {
     }
 
     private fun login(){
-        if(binding.teCorreo.text != null && binding.tePass.text != null){
-            val correo = binding.teCorreo.text.toString()
-            val pass = binding.tePass.text.toString()
-            if(correo == "admin" && pass == "admin"){
-                startActivity(Intent(this,AddData::class.java))
+        val correo: String =binding.teCorreo.getText().toString()
+        val pass: String = binding.tePass.getText().toString()
+
+        when {
+            correo.length == 0 && pass.length == 0 -> {
+                Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show()
+            }
+            pass.length == 0 -> {
+                Toast.makeText(this,"Debes ingresar una contraseña", Toast.LENGTH_SHORT).show()
+            }
+            correo.length == 0 -> {
+                Toast.makeText(this,"Debes ingresar un correo", Toast.LENGTH_SHORT).show()
+            }
+            correo != "usuario@gmail.com" || pass != "1234" -> {
+                if(binding.teCorreo.text != null && binding.tePass.text != null){
+                    val correo = binding.teCorreo.text.toString()
+                    val pass = binding.tePass.text.toString()
+
+
+                    if(correo == "admin" && pass == "admin"){
+                        startActivity(Intent(this,AddData::class.java))
+                    }
+
+                    auth.signInWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
+                        if(it.isSuccessful){
+                            showHome(it.result?.user?.email ?: "" , ProvidertType.BASIC)
+                        }
+                        else{
+                            //Log.e("login", "Los datos de usuario son $correo y  $pass ")
+                            showAlert()
+                        }
+                    }
+                }
+                else{
+                    Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_LONG).show()
+
+                }
+                Toast.makeText(this, "Bienvenido a UWU", Toast.LENGTH_LONG).show()
+            }
+            correo == "usuario@gmail.com" && pass == "1234" -> {
+                Toast.makeText(this,"Bienvenido de nuevo!!", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, HomeActivity::class.java))
+
             }
 
-            auth.signInWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
-                    if(it.isSuccessful){
-                        showHome(it.result?.user?.email ?: "" , ProvidertType.BASIC)
-                    }
-                    else{
-                        //Log.e("login", "Los datos de usuario son $correo y  $pass ")
-                        showAlert()
-                    }
-            }
         }
-        else{
-            Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_LONG).show()
-        }
+
+
+
+
+
     }
-
     private fun showAlert(){
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
