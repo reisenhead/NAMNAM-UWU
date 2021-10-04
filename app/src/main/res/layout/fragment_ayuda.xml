@@ -13,15 +13,18 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="193dp"
-            android:layout_height="454dp"
+            android:layout_width="153dp"
+            android:layout_height="139dp"
             android:text="@string/help"
             android:textSize="45sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.153" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
