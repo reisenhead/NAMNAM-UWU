@@ -101,112 +101,20 @@ https://www.figma.com/file/ifTzRBuENfb1uw6nDg3nBq/UWU?node-id=0%3A1
 
 El sistema de diseño aun está en proceso por lo que solo se muestra el avance actual.
 
-## Vista Login     Vista Registro     Vista Home    Vista Favoritos
+## Vista de la App UWU
 
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png" align="left" height="380" width="180" ></a>
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png" align="left" height="380" width="180" ></a>
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.png" align="left" height="380" width="180" ></a>
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_favoritos.png" align="left" height="380" width="180" ></a>
+<a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png" align="left" height="380" width="180" ></a>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Vista Carrito
-
- <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png" align="left" height="380" width="180" ></a>
-
-
-## Vista Perfil
+## Vista de la App UWU
 
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png" align="left" height="380" width="180" ></a>
-
-
-## Vista Mapa
-
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png" align="left" height="380" width="180" ></a>
-
-## Vista Mapa Establecimiento
-
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png" align="left" height="380" width="180" ></a>
-
-## Vista Lista
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png" align="left" height="380" width="180" ></a>
 
 
