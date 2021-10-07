@@ -110,6 +110,31 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
 
 ## Vista Home
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.pngpng) 
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.png) 
+
+
+## Vista Favoritos
+
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_favoritos.png) 
+
+## Vista Carrito
+
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png) 
+
+## Vista Perfil
+
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png) 
+
+## Vista Mapa
+
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png) 
+
+## Vista Mapa Establecimiento
+
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png) 
+
+## Vista Lista
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png)
+
 
 
