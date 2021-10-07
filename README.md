@@ -101,13 +101,12 @@ https://www.figma.com/file/ifTzRBuENfb1uw6nDg3nBq/UWU?node-id=0%3A1
 
 El sistema de diseño aun está en proceso por lo que solo se muestra el avance actual.
 
-## Vista Login        ## Vista Registro
+## Vista Login       
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png)![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png)  
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png)
 
-
-
-
+ ## Vista Registro
+![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png)  
 
 ## Vista Home
 
