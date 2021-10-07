@@ -108,11 +108,13 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.png" align="left" height="380" width="180" ></a>
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_favoritos.png" align="left" height="380" width="180" ></a>
 <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png" align="left" height="380" width="180" ></a><br>
-
+<p> 
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png" align="left" height="380" width="180" ></a>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png" align="left" height="380" width="180" ></a>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png" align="left" height="380" width="180" ></a>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png" align="left" height="380" width="180" ></a><br>
- 
+<p> 
+  <p> 
  ## App UWU
+  <p> 
 
