@@ -103,39 +103,42 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
 
 ## Vista Login       
 
-<a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png" align="left" height="304" width="144" ></a>
-![image]((https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png "Title" {width=144px height=304px})
+<a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png" align="left" height="380" width="180" ></a>
+
 
  ## Vista Registro
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png)  
+ 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png" align="left" height="380" width="180" ></a>
 
 ## Vista Home
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.png) 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_home.png" align="left" height="380" width="180" ></a>
 
 
 ## Vista Favoritos
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_favoritos.png) 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_favoritos.png" align="left" height="380" width="180" ></a>
 
 ## Vista Carrito
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png) 
+ <a href="url"><img src="(https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_carrito.png" align="left" height="380" width="180" ></a>
+
 
 ## Vista Perfil
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png) 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png" align="left" height="380" width="180" ></a>
+
 
 ## Vista Mapa
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png) 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png" align="left" height="380" width="180" ></a>
 
 ## Vista Mapa Establecimiento
 
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png) 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png" align="left" height="380" width="180" ></a>
 
 ## Vista Lista
-![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png)
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png" align="left" height="380" width="180" ></a>
 
 
 
