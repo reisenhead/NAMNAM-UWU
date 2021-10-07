@@ -103,7 +103,7 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
 
 ## Vista Login       
 
-![image](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png = 144x304)
+![image]((https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_login.png "Title" {width=144px height=304px})
 
  ## Vista Registro
 ![vista de calculadora](https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_registro.png)  
