@@ -1,11 +1,530 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:paddingTop="@dimen/list_item_spacing_half"
-    android:paddingBottom="@dimen/list_item_spacing_half"
-    tools:context=".ItemListDialogFragment"
-    tools:listitem="@layout/fragment_item_list_dialog_list_dialog_item" />
+    tools:context=".Fragments.StarFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textStar"
+            android:layout_width="337dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="@string/orders"
+            android:textColor="@color/accent1"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonpedido"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/white"
+            android:foregroundTint="#131313"
+            android:text="@string/my_orders"
+            android:textColor="@color/ColorPreci"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textStar"
+            app:rippleColor="#070707"
+            app:strokeColor="#0E0E0E" />
+
+        <Button
+            android:id="@+id/buttonbreakfast"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/my_package"
+            android:textColor="@color/ColorPreci"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/buttonpedido"
+            app:layout_constraintTop_toTopOf="@+id/buttonpedido" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="330dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonpedido">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageRest1"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/imagerest"
+                    android:src="@drawable/icon_garufa"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <ImageView
+                    android:id="@+id/imagedistany1"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icondistiny"
+                    android:src="@drawable/en_camino"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest1"
+                    app:layout_constraintTop_toBottomOf="@+id/textrest1" />
+
+                <TextView
+                    android:id="@+id/textrest1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/packageorder"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textdsitany1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/destiny"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imagedistany1"
+                    app:layout_constraintTop_toBottomOf="@+id/textrest1" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/cost"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest1"
+                    app:layout_constraintTop_toBottomOf="@+id/textdsitany1" />
+
+                <Button
+                    android:id="@+id/buttonStarRest"
+                    android:layout_width="37dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="175dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/signo"
+                    android:text="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.408" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview2"
+            android:layout_width="330dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageRest"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/imagerestone"
+                    android:src="@drawable/icon_greengrass"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <ImageView
+                    android:id="@+id/imageIconDistiny2"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icondistinyone"
+                    android:src="@drawable/entregado"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest2" />
+
+                <TextView
+                    android:id="@+id/textRest2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/packageorderone"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/encamino2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/destinyone"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageIconDistiny2"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest2" />
+
+                <TextView
+                    android:id="@+id/cost2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/costone"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest"
+                    app:layout_constraintTop_toBottomOf="@+id/encamino2" />
+
+                <Button
+                    android:id="@+id/buttonStarRest3"
+                    android:layout_width="37dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="175dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/signo"
+                    android:text="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.408" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview3"
+            android:layout_width="330dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageRest3"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/imagerestone"
+                    android:src="@drawable/icon_elpescadito"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <ImageView
+                    android:id="@+id/imageIconDistiny3"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icondistinyone"
+                    android:src="@drawable/entregado"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest3"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest3" />
+
+                <TextView
+                    android:id="@+id/textRest3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/packageordertwo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest3"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/encamino3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/destinyone"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageIconDistiny3"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest3" />
+
+                <TextView
+                    android:id="@+id/cost3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/costtwo"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest3"
+                    app:layout_constraintTop_toBottomOf="@+id/encamino3" />
+
+                <Button
+                    android:id="@+id/buttonStarRest2"
+                    android:layout_width="37dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="175dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/signo"
+                    android:text="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.408" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview5"
+            android:layout_width="330dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview4">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageRest5"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/imagerestone"
+                    android:src="@drawable/icon_forever"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <ImageView
+                    android:id="@+id/imageIconDistiny5"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icondistinyone"
+                    android:src="@drawable/entregado"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest5"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest5" />
+
+                <TextView
+                    android:id="@+id/textRest5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/packageorderfour"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/encamino5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/destinyone"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageIconDistiny5"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest5" />
+
+                <TextView
+                    android:id="@+id/cost5"
+                    android:layout_width="29dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/costfour"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest5"
+                    app:layout_constraintTop_toBottomOf="@+id/encamino5" />
+
+                <Button
+                    android:id="@+id/buttonStarRest5"
+                    android:layout_width="37dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="175dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/signo"
+                    android:text="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.408" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview4"
+            android:layout_width="330dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="10dp"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageRest4"
+                    android:layout_width="94dp"
+                    android:layout_height="91dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/imagerestone"
+                    android:src="@drawable/icon_amamba"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <ImageView
+                    android:id="@+id/imageIconDistiny4"
+                    android:layout_width="20dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icondistinyone"
+                    android:src="@drawable/entregado"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest4"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest4" />
+
+                <TextView
+                    android:id="@+id/textRest4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/packageorderthree"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/encamino4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/destinyone"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageIconDistiny4"
+                    app:layout_constraintTop_toBottomOf="@+id/textRest4" />
+
+                <TextView
+                    android:id="@+id/cost4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/costthree"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest4"
+                    app:layout_constraintTop_toBottomOf="@+id/encamino4" />
+
+                <Button
+                    android:id="@+id/buttonStarRest4"
+                    android:layout_width="37dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="175dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableEnd="@drawable/signo"
+                    android:text="@string/icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageRest4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.408" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

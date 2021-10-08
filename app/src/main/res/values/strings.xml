@@ -31,6 +31,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="imagen_de_perfil">Imagen de perfil</string>
     <string name="imagen_de_fondo">Imagen de fondo</string>
+    <string name="button_map">MAPA</string>
+    <string name="button_list">LISTA</string>
 
     //profilescreen
     <string name="username">Persona</string>
@@ -40,17 +42,17 @@
     <string name="address">Mis direcciones</string>
     <string name="settings">Configuración</string>
     <string name="phone">+551122334455</string>
-    <string name="methods">Métodos de pago       ></string>
+    <string name="methods">Métodos de pago</string>
     <string name="email">correo@gmail.com</string>
-    <string name="coupons">Cupones    ></string>
-    <string name="terms">Terminos y Condiciones   ></string>
-    <string name="help">Ayuda   ></string>
-    <string name="close">Cerrar sesión   ></string>
+    <string name="coupons">Cupones</string>
+    <string name="terms">Terminos y Condiciones</string>
+    <string name="help">Ayuda</string>
+    <string name="close">Cerrar sesión</string>
 
     //card
     <string name="package_card">Paquete</string>
     <string name="place">Restaurant</string>
-    <string name="distance">Distancia</string>
+    <string name="distance">8</string>
     <string name="hour">Hora</string>
     <string name="distance_km">km</string>
     <string name="day">Mañana:</string>
@@ -59,11 +61,134 @@
     <string name="available">10</string>
     <string name="price">$50</string>
     <string name="buttonlist">Lista</string>
-    <string name="line"> <strike>$150</strike> </string>
+    <string name="line"> <strike>$150</strike></string>
     <string name="btn_crear_cuenta">Crear cuenta</string>
     <string name="volver_inicio">Ya tengo una cuenta</string>
     <string name="nombre_usuario">Nombre completo</string>
     <string name="telefono">Teléfono</string>
 
+    //Fragment Profile
+    <string name="Methods">Metodos de Pago</string>
+    <string name="Help">Ayuda</string>
+    <string name="Coupons">Cupones</string>
+    <string name="Terms">Terminos y Condiciones</string>
+
+    //Fragment Star
+    <string name="orders">Mis pedidos</string>
+    <string name="my_orders">Mi pedido</string>
+    <string name="my_package">Paquete Desayuno</string>
+
+    //Package Garufa
+    <string name="packageorder">Fonda Garufa</string>
+    <string name="destiny">En camino</string>
+    <string name="cost">$150</string>
+    <string name="imagerest">restaurante</string>
+    <string name="icondistiny">destino</string>
+    <string name="icon"> </string>
+
+    //Package Green Grass Condesa
+    <string name="packageorderone">Green Grass Condesa</string>
+    <string name="destinyone">Entregado</string>
+    <string name="costone">$100</string>
+    <string name="imagerestone">restaurante</string>
+    <string name="icondistinyone">destino</string>
+    <string name="iconone"> </string>
+
+    //Package El pescadito
+    <string name="packageordertwo">El pescadito</string>
+    <string name="costtwo">$125</string>
+    <string name="imageresttwo">restaurante</string>
+    <string name="icontwo">  </string>
+
+    //Package Amamba
+    <string name="packageorderthree">Amamba</string>
+    <string name="costthree">$50</string>
+    <string name="imageresthree">restaurante</string>
+    <string name="iconthree"> </string>
+
+    //Package Forever
+    <string name="packageorderfour">Forever</string>
+    <string name="costfour">$200</string>
+    <string name="imagerestfour">restaurante</string>
+    <string name="iconfour"> </string>
+
+    //My order
+    <string name="myOrder">Mi Pedido</string>
+
+    //BreakFast
+    <string name="breakFast">Paquete Desayuno</string>
+    <string name="logo">logo</string>
+    <string name="costBreak">$70</string>
+
+    //Lasagna
+    <string name="lasagna">Lasagña de Carne</string>
+    <string name="costBreakone">$50</string>
+
+    //Postres
+    <string name="postres">Paquete Postres</string>
+    <string name="costpostres">$30</string>
+    <string name="delivery">Entrega</string>
+    <string name="option">Recoge en tienda de 8:00-00:00</string>
+    <string name="pay">Pago</string>
+    <string name="optionpay">Efectivo</string>
+    <string name="total">Total</string>
+    <string name="totalcost">$150</string>
+    <string name="eggs">Huevos Ahogados</string>
+    <string name="eggscost">$25</string>
+    <string name="juice">Jugo Buena Digestión</string>
+    <string name="juicecost">$15</string>
+    <string name="coffe">Café</string>
+    <string name="coffecost">$10</string>
+    <string name="hot_cakes">Hot Cakes Tradicionales</string>
+    <string name="hot_cakes_cost">$20</string>
+
+    //Metodos de pago
+    <string name="carAdd">Tarjeta de Débito o Crédito</string>
+    <string name="carText">Visa, MasterCard, American Express</string>
+    <string name="carPay">Mercado Pago</string>
+    <string name="caradd">Agrega una Tarjeta</string>
+    <string name="carPayText">Agrega una cuenta de Mercado Libre</string>
+    <string name="carname">Nombre del tarjeta habiente</string>
+    <string name="carnamehint">Nombre Completo</string>
+    <string name="carnum">Numero de Tarjeta</string>
+    <string name="number">0000 0000 0000 0000</string>
+    <string name="vencimiento">MM/AA</string>
+    <string name="vencimientoTEXT">Vencimiento</string>
+    <string name="addButton">Agregar</string>
+    <string name="codigo">Codigo de Seguridad</string>
+    <string name="cvv">CVV</string>
+
+    //Cupones
+    <string name="addcoupons">Cupones Promocionales</string>
+    <string name="couponsname">Agregar Código</string>
+
+    //Terminos y Condiciones
+    <string name="term">Términos y Condiciones</string>
+    <string name="termText">de uso para usuarios uwu</string>
+
+    //Otros
+    <string name="local">Establecimientos</string>
+    <string name="signo">$</string>
+
+    <!-- textos para la push simple -->
+    <string name="simple_title">UWU</string>
+    <string name="simple_body">¡Productos de nuestros establecimientos!</string>
+
+    <!-- textos para la push con acción -->
+    <string name="action_title">Cursos Bedu</string>
+    <string name="action_body">¡Espera los nuevos cursos que Bedu ha preparado para ti!</string>
+
+    <!-- textos para la push con botón -->
+    <string name="button_title">Bedu</string>
+    <string name="button_body">Da click en el botón de abajo para ejecutar una acción</string>
+    <string name="button_text">Aceptar</string>
+
+
+    <string name="large_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+
+    <!-- CANAL CURSOS -->
+    <string name="channel_courses">cursos</string>
+    <string name="courses_description">Notificaciones acerca de cursos impartidos</string>
 
 </resources>

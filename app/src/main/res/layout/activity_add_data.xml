@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addLocat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Data.AddData">
+
+    <Button
+        android:id="@+id/addFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar comida"
+        app:layout_constraintBottom_toTopOf="@+id/addRestaurant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addLocation" />
+
+    <Button
+        android:id="@+id/addLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar locación"
+        app:layout_constraintBottom_toTopOf="@+id/addFood"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Restaurante"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addFood" />
+</androidx.constraintlayout.widget.ConstraintLayout>
