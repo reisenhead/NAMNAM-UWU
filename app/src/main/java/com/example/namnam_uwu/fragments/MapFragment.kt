@@ -113,7 +113,10 @@ class MapFragment : Fragment() {
 
         mMap = googleMap
 
-        val cdMx = LatLng(19.4115814,-99.1717618)
+        val lat : Double = 19.4115814
+        val log : Double = -99.1717618
+
+        val cdMx = LatLng(lat,log)
         val fondaGarufa = LatLng(19.4116616,-99.1747227)
         val greenGlass = LatLng(19.4062635,-99.1738504)
         val elPescadito = LatLng(19.4142968,-99.1734571)
