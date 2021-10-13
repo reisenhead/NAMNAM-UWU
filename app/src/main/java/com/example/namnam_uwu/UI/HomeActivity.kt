@@ -116,11 +116,12 @@ class HomeActivity : AppCompatActivity() {
 
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
     private fun simpleNotification(){
 
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.triforce) //seteamos el ícono de la push notification
-           //setColor(getColor(R.color.accent1)) //definimos el color del ícono y el título de la notificación
+            .setSmallIcon(R.drawable.logo_uwu) //seteamos el ícono de la push notification
+            .setColor(getColor(R.color.accent1)) //definimos el color del ícono y el título de la notificación
             .setContentTitle(getString(R.string.simple_title)) //seteamos el título de la notificación
             .setContentText(getString(R.string.simple_body)) //seteamos el cuerpo de la notificación
             .setPriority(NotificationCompat.PRIORITY_DEFAULT) //Ponemos una prioridad por defecto
