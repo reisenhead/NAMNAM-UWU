@@ -23,7 +23,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/Correo_Electronico"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
@@ -68,6 +68,53 @@
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/tfPass" />
 
+    <ImageButton
+        android:id="@+id/btnGoogle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
+        app:srcCompat="@drawable/icon_google"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/phoButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/phoneButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
+        app:srcCompat="@drawable/cellphone_check"
+        android:contentDescription="@string/button_title" />
+
+    <ImageButton
+        android:id="@+id/phoneButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/btnGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
+        app:srcCompat="@drawable/icon_facebook"
+        android:contentDescription="@string/button_title" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
     <Button
         android:id="@+id/btnOlvidaste"
         style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -98,14 +145,13 @@
     <ImageView
         android:id="@+id/vector"
         android:layout_width="453dp"
-        android:layout_height="179dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="159dp"
         android:contentDescription="@string/descripcion_vector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
+        app:layout_constraintTop_toBottomOf="@+id/phoneButton"
+        app:layout_constraintVertical_bias="0.904"
         app:srcCompat="@drawable/vector" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -121,6 +167,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.08" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/next"
+        android:textSize="16sp"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearC" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
