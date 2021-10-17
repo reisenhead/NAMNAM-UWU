@@ -55,6 +55,7 @@ class ProfileFragment : Fragment() {
     private lateinit var imageProfile: CircleImageView
 
     private val db = FirebaseFirestore.getInstance()
+    private val dbGoogle = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -82,6 +83,12 @@ class ProfileFragment : Fragment() {
             correo.text = email
         }
 
+        dbGoogle.collection("users").document(email).get().addOnSuccessListener {
+            user.text = it.get("user") as String?
+            if(it.get("description") != null)
+                description.text = it.get("description") as String?
+            correo.text = email
+        }
 
         buttonone.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()

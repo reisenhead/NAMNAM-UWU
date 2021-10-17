@@ -22,7 +22,8 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 
 enum class ProvidertType{
-    BASIC
+    BASIC,
+    GOOGLE
 }
 
 var email = String()

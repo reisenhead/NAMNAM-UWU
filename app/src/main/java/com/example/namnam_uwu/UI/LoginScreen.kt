@@ -12,13 +12,16 @@ import com.example.namnam_uwu.utils.Utility
 import androidx.appcompat.app.AlertDialog
 import com.example.namnam_uwu.Data.AddData
 import com.example.namnam_uwu.R
+import com.example.namnam_uwu.UI.ProvidertType.GOOGLE
 import com.example.namnam_uwu.databinding.ActivityLoginScreenBinding
+import com.google.android.gms.auth.api.credentials.IdentityProviders.GOOGLE
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.internal.AccountType.GOOGLE
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -127,10 +130,6 @@ class LoginScreen : AppCompatActivity() {
 
         }
 
-
-
-
-
     }
     private fun showAlert(){
         val builder = AlertDialog.Builder(this)
@@ -195,7 +194,8 @@ class LoginScreen : AppCompatActivity() {
             Utility.displaySnackBar(binding.root, "Login was successful: ", this, R.color.green)
             binding.loading.visibility = View.GONE
             binding.btnGoogle.visibility = View.VISIBLE
-            startActivity(Intent(this, HomeActivity::class.java))
+            //startActivity(Intent(this, HomeActivity::class.java))
+            showHome(user!!.email ?: "", ProvidertType.GOOGLE)
             Toast.makeText(this, "Bienvenido a UWU", Toast.LENGTH_LONG).show()
         }
     }
