@@ -10,8 +10,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import com.example.namnam_uwu.Fragments.CardsFragment
+import com.example.namnam_uwu.Fragments.MapFragment
+import com.example.namnam_uwu.Fragments.ProfileFragment
+import com.example.namnam_uwu.Fragments.ShoppingCartFragment
 import com.example.namnam_uwu.databinding.FragmentHomeBinding
-import com.example.namnam_uwu.fragments.*
 
 
 import kotlinx.android.synthetic.main.activity_home.*
