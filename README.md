@@ -127,9 +127,9 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
  </br>
  
 
- </br>
+ <br>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/crashlytics.png"  ></a>
- </br>
+ <br>
 
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/authentication.png"  ></a>
  
