@@ -13,21 +13,27 @@ import com.example.namnam_uwu.Data.AddData
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.databinding.ActivityLoginScreenBinding
 import com.example.namnam_uwu.utils.Utility
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 
 class LoginScreen : AppCompatActivity() {
 
-    private lateinit var binding : ActivityLoginScreenBinding
+    private lateinit var binding: ActivityLoginScreenBinding
+
+    private val callbackManager = CallbackManager.Factory.create()
 
     private lateinit var boton: Button
     private lateinit var boton2: Button
@@ -35,6 +41,7 @@ class LoginScreen : AppCompatActivity() {
     private lateinit var usuario: EditText
     private lateinit var contrasenia: EditText
     private lateinit var googleSignInClient: GoogleSignInClient
+
     //private val auth = Firebase.auth
     private lateinit var auth: FirebaseAuth
 
@@ -45,6 +52,7 @@ class LoginScreen : AppCompatActivity() {
         setContentView(view)
 
         FirebaseApp.initializeApp(this)
+
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -69,60 +77,90 @@ class LoginScreen : AppCompatActivity() {
             startActivity(Intent(this, PhoneActivity::class.java))
         }
 
+        binding.btnFacebook.setOnClickListener {
 
-        boton.setOnClickListener{
-                login()
+            LoginManager.getInstance().logInWithReadPermissions(this, listOf("email"))
+
+            LoginManager.getInstance().registerCallback(callbackManager,
+            object : FacebookCallback<LoginResult>{
+                override fun onSuccess(result: LoginResult?) {
+
+                    result?.let {
+                        val token : AccessToken = it.accessToken
+                        val credential : AuthCredential = FacebookAuthProvider.getCredential(token.token)
+                        FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
+                            if (it.isSuccessful){
+                                showHome(it.result?.user?.email ?: "",ProvidertType.FACEBOOK)
+                            }else{
+                                showAlert()
+                            }
+                        }
+                    }
+
+
+                }
+                override fun onCancel() {
+
+                }
+                override fun onError(error: FacebookException?) {
+                    showAlert()
+                }
+            })
         }
 
-        boton2.setOnClickListener{
+
+        boton.setOnClickListener {
+            login()
+        }
+
+        boton2.setOnClickListener {
             startActivity(Intent(this, CrearCuenta::class.java))
         }
 
 
     }
 
-    private fun login(){
-        val correo: String =binding.teCorreo.getText().toString()
+    private fun login() {
+        val correo: String = binding.teCorreo.getText().toString()
         val pass: String = binding.tePass.getText().toString()
 
         when {
             correo.length == 0 && pass.length == 0 -> {
-                Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_SHORT).show()
             }
             pass.length == 0 -> {
-                Toast.makeText(this,"Debes ingresar una contraseña", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Debes ingresar una contraseña", Toast.LENGTH_SHORT).show()
             }
             correo.length == 0 -> {
-                Toast.makeText(this,"Debes ingresar un correo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Debes ingresar un correo", Toast.LENGTH_SHORT).show()
             }
             correo != "usuario@gmail.com" || pass != "1234" -> {
-                if(binding.teCorreo.text != null && binding.tePass.text != null){
+                if (binding.teCorreo.text != null && binding.tePass.text != null) {
                     val correo = binding.teCorreo.text.toString()
                     val pass = binding.tePass.text.toString()
 
 
-                    if(correo == "admin" && pass == "admin"){
-                        startActivity(Intent(this,AddData::class.java))
+                    if (correo == "admin" && pass == "admin") {
+                        startActivity(Intent(this, AddData::class.java))
                     }
 
-                    auth.signInWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
-                        if(it.isSuccessful){
-                            showHome(it.result?.user?.email ?: "" , ProvidertType.BASIC)
-                        }
-                        else{
+                    auth.signInWithEmailAndPassword(correo, pass).addOnCompleteListener(this) {
+                        if (it.isSuccessful) {
+                            showHome(it.result?.user?.email ?: "", ProvidertType.BASIC)
+                        } else {
                             //Log.e("login", "Los datos de usuario son $correo y  $pass ")
                             showAlert()
                         }
                     }
-                }
-                else{
-                    Toast.makeText(this,"Los campos no pueden estar vacios", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Los campos no pueden estar vacios", Toast.LENGTH_LONG)
+                        .show()
 
                 }
                 Toast.makeText(this, "Bienvenido a UWU", Toast.LENGTH_LONG).show()
             }
             correo == "usuario@gmail.com" && pass == "1234" -> {
-                Toast.makeText(this,"Bienvenido de nuevo!!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Bienvenido de nuevo!!", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, HomeActivity::class.java))
 
             }
@@ -130,16 +168,17 @@ class LoginScreen : AppCompatActivity() {
         }
 
     }
-    private fun showAlert(){
+
+    private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
         builder.setMessage("Se ha producido un error autenticando al usuario")
         builder.setPositiveButton("Aceptar", null)
-        val dialog : AlertDialog = builder.create()
+        val dialog: AlertDialog = builder.create()
         dialog.show()
     }
 
-    private fun showHome(email: String, provider: ProvidertType){
+    private fun showHome(email: String, provider: ProvidertType) {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
@@ -147,8 +186,11 @@ class LoginScreen : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
+
     // Funciones nuevas
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        callbackManager.onActivityResult(requestCode,resultCode,data)
         super.onActivityResult(requestCode, resultCode, data)
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);

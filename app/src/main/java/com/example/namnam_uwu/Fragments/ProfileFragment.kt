@@ -2,17 +2,18 @@ package com.example.namnam_uwu.Fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.media.session.PlaybackStateCompat
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationSet
 import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.namnam_uwu.R
 import com.example.namnam_uwu.UI.LoginScreen
+import com.example.namnam_uwu.UI.ProvidertType
 import com.example.namnam_uwu.UI.email
+import com.example.namnam_uwu.UI.provider
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -116,6 +117,9 @@ class ProfileFragment : Fragment() {
         buttoncerrar.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             Firebase.auth.signOut()
+            if (provider == ProvidertType.FACEBOOK.name){
+                LoginManager.getInstance().logOut()
+            }
             startActivity(Intent(context, LoginScreen::class.java))
         }
 

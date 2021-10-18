@@ -88,13 +88,13 @@
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/white"
         android:contentDescription="@string/button_title"
-        app:layout_constraintStart_toEndOf="@+id/facebookButton"
+        app:layout_constraintStart_toEndOf="@+id/btnFacebook"
         app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
         app:srcCompat="@drawable/cellphone_check"
         tools:ignore="ContentDescription"/>
 
     <ImageButton
-        android:id="@+id/facebookButton"
+        android:id="@+id/btnFacebook"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="28dp"
