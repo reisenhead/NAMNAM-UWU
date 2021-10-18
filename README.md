@@ -25,7 +25,7 @@ RECUERDA utilizar este correo y contraseña para acceder:
 - correo: usuario@gmail.com
 - password: 123456
 
-*Se puede acceder via registro de celular , Correo Gmail y Facebook.
+*Se puede acceder via registro de celular , Correo Gmail y Facebook(En desarrollo por ser un proyecto que no esta en la App Store).
 
 keystore del proyecto:
 
