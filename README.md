@@ -25,6 +25,13 @@ RECUERDA utilizar este correo y contraseña para acceder:
 - correo: usuario@gmail.com
 - password: 123456
 
+*Se puede acceder via registro de celular , Correo Gmail y Facebook(En desarrollo por ser un proyecto que no esta en la App Store).
+
+keystore del proyecto:
+
+https://github.com/reisenhead/NAMNAM-UWU/blob/master/keystore/key.store
+
+
 
 
 
@@ -115,6 +122,19 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_perfil.png" align="left" height="380" width="180" ></a>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map.png" align="left" height="380" width="180" ></a>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_map_establecimiento.png" align="left" height="380" width="180" ></a>
+ <br>
  <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/uwu_lista.png" align="left" height="380" width="180" ></a>
+ <br>
+ 
+
+ <br>
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/crashlytics.png"  ></a>
+ <br>
+
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/authentication.png"  ></a>
+ 
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/autentication.png"  ></a>
+
+
 
 
