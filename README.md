@@ -25,6 +25,13 @@ RECUERDA utilizar este correo y contraseña para acceder:
 - correo: usuario@gmail.com
 - password: 123456
 
+*Se puede acceder via registro de celular , Correo Gmail y Facebook.
+
+keystore del proyecto:
+
+https://github.com/reisenhead/NAMNAM-UWU/blob/master/keystore/key.store
+
+
 
 
 
