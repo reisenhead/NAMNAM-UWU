@@ -41,7 +41,8 @@
     <string name="payment">Mis métodos de pago</string>
     <string name="address">Mis direcciones</string>
     <string name="settings">Configuración</string>
-    <string name="phone">+551122334455</string>
+    <string name="phone">+521122334455</string>
+    <string name="userphone">USUARIO</string>
     <string name="methods">Métodos de pago</string>
     <string name="email">correo@gmail.com</string>
     <string name="coupons">Cupones</string>

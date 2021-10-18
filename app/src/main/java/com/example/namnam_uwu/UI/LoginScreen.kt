@@ -90,7 +90,7 @@ class LoginScreen : AppCompatActivity() {
                         val credential : AuthCredential = FacebookAuthProvider.getCredential(token.token)
                         FirebaseAuth.getInstance().signInWithCredential(credential).addOnCompleteListener {
                             if (it.isSuccessful){
-                                showHome(it.result?.user?.email ?: "",ProvidertType.FACEBOOK)
+                                showHome(it.result?.user?.email?: "",ProvidertType.FACEBOOK)
                             }else{
                                 showAlert()
                             }
