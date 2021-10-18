@@ -129,7 +129,7 @@ El sistema de diseño aun está en proceso por lo que solo se muestra el avance 
 ## App UWU Crashlytics
 
  </br>
- <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/crashlytics.png" align="left" height="380" width="180" ></a>
+ <a href="url"><img src="https://github.com/reisenhead/NAMNAM-UWU/blob/master/im%C3%A1genes/crashlytics.png"  ></a>
  </br>
 
 
