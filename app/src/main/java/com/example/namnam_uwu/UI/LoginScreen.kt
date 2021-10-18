@@ -183,6 +183,7 @@ class LoginScreen : AppCompatActivity() {
             putExtra("email", email)
             putExtra("provider", provider.name)
 
+
         }
         startActivity(homeIntent)
     }

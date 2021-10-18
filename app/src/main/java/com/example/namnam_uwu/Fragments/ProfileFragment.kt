@@ -76,8 +76,7 @@ class ProfileFragment : Fragment() {
         user = view.findViewById(R.id.username)
         description = view.findViewById(R.id.tvDescription)
         correo = view.findViewById(R.id.tvCorreo)
-        phone = view.findViewById(R.id.tvDescription)
-        imageProfile = view.findViewById(R.id.profile_image)
+        giimageProfile = view.findViewById(R.id.profile_image)
 
 
         //Recuperamos los datos del usuario
@@ -86,6 +85,7 @@ class ProfileFragment : Fragment() {
             if(it.get("description") != null)
                 description.text = it.get("description") as String?
             correo.text = email
+
 
         }
 
@@ -117,6 +117,7 @@ class ProfileFragment : Fragment() {
         buttoncerrar.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             Firebase.auth.signOut()
+
             if (provider == ProvidertType.FACEBOOK.name){
                 LoginManager.getInstance().logOut()
             }
