@@ -76,7 +76,7 @@ class ProfileFragment : Fragment() {
         user = view.findViewById(R.id.username)
         description = view.findViewById(R.id.tvDescription)
         correo = view.findViewById(R.id.tvCorreo)
-        giimageProfile = view.findViewById(R.id.profile_image)
+        imageProfile = view.findViewById(R.id.profile_image)
 
 
         //Recuperamos los datos del usuario
