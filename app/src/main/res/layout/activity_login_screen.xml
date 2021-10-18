@@ -72,7 +72,7 @@
         android:id="@+id/btnGoogle"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="115dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,19 +81,20 @@
         tools:ignore="ContentDescription" />
 
     <ImageButton
-        android:id="@+id/phoButton"
+        android:id="@+id/btnPhone"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/phoneButton"
+        android:contentDescription="@string/button_title"
+        app:layout_constraintStart_toEndOf="@+id/facebookButton"
         app:layout_constraintTop_toBottomOf="@+id/btnCrearC"
         app:srcCompat="@drawable/cellphone_check"
-        android:contentDescription="@string/button_title" />
+        tools:ignore="ContentDescription"/>
 
     <ImageButton
-        android:id="@+id/phoneButton"
+        android:id="@+id/facebookButton"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="28dp"
@@ -150,7 +151,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnPhone"
         app:layout_constraintVertical_bias="0.904"
         app:srcCompat="@drawable/vector" />
 

@@ -14,7 +14,9 @@ import com.example.namnam_uwu.R
 import com.example.namnam_uwu.UI.LoginScreen
 import com.example.namnam_uwu.UI.email
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import de.hdodenhof.circleimageview.CircleImageView
 
 
@@ -52,6 +54,7 @@ class ProfileFragment : Fragment() {
     private lateinit var user: TextView
     private lateinit var description: TextView
     private lateinit var correo: TextView
+    private lateinit var phone: TextView
     private lateinit var imageProfile: CircleImageView
 
     private val db = FirebaseFirestore.getInstance()
@@ -72,6 +75,7 @@ class ProfileFragment : Fragment() {
         user = view.findViewById(R.id.username)
         description = view.findViewById(R.id.tvDescription)
         correo = view.findViewById(R.id.tvCorreo)
+        phone = view.findViewById(R.id.tvDescription)
         imageProfile = view.findViewById(R.id.profile_image)
 
 
@@ -81,14 +85,9 @@ class ProfileFragment : Fragment() {
             if(it.get("description") != null)
                 description.text = it.get("description") as String?
             correo.text = email
+
         }
 
-        dbGoogle.collection("users").document(email).get().addOnSuccessListener {
-            user.text = it.get("user") as String?
-            if(it.get("description") != null)
-                description.text = it.get("description") as String?
-            correo.text = email
-        }
 
         buttonone.setOnClickListener {
             val fr = fragmentManager?.beginTransaction()
@@ -116,6 +115,7 @@ class ProfileFragment : Fragment() {
         }
         buttoncerrar.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
+            Firebase.auth.signOut()
             startActivity(Intent(context, LoginScreen::class.java))
         }
 

@@ -1,34 +1,28 @@
 package com.example.namnam_uwu.UI
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.namnam_uwu.utils.Utility
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.namnam_uwu.Data.AddData
 import com.example.namnam_uwu.R
-import com.example.namnam_uwu.UI.ProvidertType.GOOGLE
 import com.example.namnam_uwu.databinding.ActivityLoginScreenBinding
-import com.google.android.gms.auth.api.credentials.IdentityProviders.GOOGLE
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import com.example.namnam_uwu.utils.Utility
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.common.internal.AccountType.GOOGLE
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
-
-
+import com.google.firebase.ktx.Firebase
 
 
 class LoginScreen : AppCompatActivity() {
@@ -70,6 +64,11 @@ class LoginScreen : AppCompatActivity() {
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+
+        binding.btnPhone.setOnClickListener {
+            startActivity(Intent(this, PhoneActivity::class.java))
+        }
+
 
         boton.setOnClickListener{
                 login()
@@ -144,6 +143,7 @@ class LoginScreen : AppCompatActivity() {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
+
         }
         startActivity(homeIntent)
     }

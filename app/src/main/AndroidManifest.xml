@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_uwu_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NAMNAMUWU">
-        <activity android:name=".UI.MyOrder"></activity>
+        <activity android:name=".UI.PhoneActivity"></activity>
+        <activity android:name=".UI.PhoneActivity2" />
+        <activity android:name=".UI.MyOrder" />
         <activity
             android:name=".Data.AddData"
             android:exported="true" />
